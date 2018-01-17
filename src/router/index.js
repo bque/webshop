@@ -26,6 +26,11 @@ export default new Router({
     path: '/',
     name: 'OrderResult',
     component: OrderResult
-  }
-  ]
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    component: Cart
+  }]
+
 })
