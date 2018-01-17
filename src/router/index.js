@@ -21,5 +21,10 @@ export default new Router({
     path: '/my',
     name: 'my',
     component: my
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    component: Cart
   }]
 })
