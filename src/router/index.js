@@ -7,13 +7,19 @@ import ChooseStores from '@/page/home/ChooseStores.vue'
 import goodList from '@/components/goodList.vue'
 import checkstand from '@/page/shoppingCart/checkstand.vue'
 import OrderResult from '@/page/shoppingCart/orderResult.vue'
+import my from '@/page/my.vue'
+
 Vue.use(Router)
 
 export default new Router({
   routes: [{
     path: '/',
     name: 'ome',
-    component: OrderResult
-
+    component: checkstand
+  },
+  {
+    path: '/my',
+    name: 'my',
+    component: my
   }]
 })
