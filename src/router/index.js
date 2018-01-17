@@ -23,7 +23,7 @@ export default new Router({
     component: my
   },
    {
-    path: '/',
+    path: '/OrderResult',
     name: 'OrderResult',
     component: OrderResult
   },
