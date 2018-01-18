@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from '@/page/Home'
-import Cart from '@/components/Cart.vue'
 import ShoppingCart from '@/page/shoppingCart.vue'
+import Classification from '@/page/classification.vue'
+import My from '@/page/my.vue'
+
+import Cart from '@/components/Cart.vue'
+
 import ChooseStores from '@/page/home/ChooseStores.vue'
 import checkstand from '@/page/shoppingCart/checkstand.vue'
 import OrderResult from '@/page/shoppingCart/orderResult.vue'
@@ -16,38 +21,37 @@ import newAddress from '@/page/mine/newAddress.vue'
 import password from '@/page/mine/password.vue'
 import about from '@/page/mine/about.vue'
 
+import Good from '@/components/good.vue'
+import waitPayment from '@/page/mine/waitPayment.vue'
+import refund from '@/page/mine/refund.vue'
+import applyRefund from '@/page/mine/applyRefund.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [{
     path: '/',
-    name: 'home',
-    component: about
+    redirect: 'home'
+  },
+  {
+    path: '/home',
+    name: 'Home',
+    component: Home
   },
   {
     path: '/my',
     name: 'my',
-    component: My,
-    children: [{
-      path: '/goodList',
-      name: 'GoodList',
-      component: GoodList
-    }]
+    component: My
   },
   {
-    path: '/OrderResult',
+    path: '/classification',
     name: 'OrderResult',
-    component: OrderResult
+    component: Classification
   },
   {
-    path: '/userCenter',
-    name: 'userCenter',
-    component: userCenter
-  },
-  {
-    path: '/changeInfo',
-    name: 'changeInfo',
-    component: changeInfo
+    path: '/shoppingCart',
+    name: 'cart',
+    component: ShoppingCart
   }
   ]
 
