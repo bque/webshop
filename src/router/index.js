@@ -4,7 +4,6 @@ import Router from 'vue-router'
 import Home from '@/page/Home'
 import ShoppingCart from '@/page/shoppingCart.vue'
 import Classification from '@/page/classification.vue'
-import My from '@/page/my.vue'
 
 import Cart from '@/components/Cart.vue'
 
