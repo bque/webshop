@@ -11,6 +11,9 @@ import Cart from '@/components/Cart.vue'
 import ChooseStores from '@/page/home/ChooseStores.vue'
 import checkstand from '@/page/shoppingCart/checkstand.vue'
 import OrderResult from '@/page/shoppingCart/orderResult.vue'
+import userCenter from '@/page/mine/userCenter.vue'
+import changeInfo from '@/page/mine/changeInfo.vue'
+
 import OrderDetail from '@/page/shoppingCart/orderDetail.vue'
 import GoodList from '@/page/classification/goodList.vue'
 
@@ -36,6 +39,7 @@ export default new Router({
     name: 'my',
     component: My
   },
+
    {
     path: '/classification',
     name: 'OrderResult',
