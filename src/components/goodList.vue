@@ -1,6 +1,8 @@
 <template>
 	<div class="goodList">
-		<div class="top">为 / 你 / 推 / 荐</div>
+	<slot name='top'>
+		<div class="top">{{title}}</div>
+	</slot>	
 		<scroller lock-x height="39.2rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
 			<div class="box1">
 				<grid :cols='2' class='padding0'>
@@ -28,10 +30,16 @@ export default {
     Scroller,
     LoadMore
   },
-  props: [],
+  props: {
+  	title:{
+  		type:String,
+  		default:'为 / 你 / 推 / 荐'
+  	}
+  },
   data() {
     return {
-      bottomCount: 20
+      bottomCount: 20,
+      titles:this.title
     }
   },
   methods: {
