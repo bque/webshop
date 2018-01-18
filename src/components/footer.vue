@@ -1,25 +1,35 @@
 <template>
 	<div class="footer">
 		<ul>
-			<li :class="{active:activeNum==1}">
-				<span class="iconfont icon-home"></span>
-				<h4>首页</h4>
+			<li :class="{active:activeNum==1}" >
+				<router-link to='/'>
+					<span class="iconfont icon-home"></span>
+					<h4>首页</h4>
+				</router-link>
 			</li>
-			<li :class="{active:activeNum==2}">
+			<li :class="{active:activeNum==2}" >
+				<router-link to='/classification'>
 				<span class="iconfont icon-leimupinleifenleileibie"></span>
 				<h4>分类</h4>
+				</router-link>
 			</li>
-			<li :class="{active:activeNum==3}">
+			<li :class="{active:activeNum==3}" >
+				<router-link to='/'>
 				<span class="iconfont icon-liwu"></span>
 				<h4>优惠券</h4>
+				</router-link>
 			</li>
-			<li :class="{active:activeNum==4}">
+			<li :class="{active:activeNum==4}" >
+				<router-link to='/shoppingCart'>
 				<span class="iconfont icon-cart"></span>
 				<h4>购物车</h4>
+				</router-link>
 			</li>
 			<li :class="{active:activeNum==5}">
+				<router-link to='/my'>
 				<span class="iconfont icon-people"></span>
 				<h4>我的</h4>
+				</router-link>
 			</li>
 		</ul>
 	</div>
