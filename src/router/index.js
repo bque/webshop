@@ -7,6 +7,9 @@ import ChooseStores from '@/page/home/ChooseStores.vue'
 import goodList from '@/components/goodList.vue'
 import checkstand from '@/page/shoppingCart/checkstand.vue'
 import OrderResult from '@/page/shoppingCart/orderResult.vue'
+import userCenter from '@/page/mine/userCenter.vue'
+import changeInfo from '@/page/mine/changeInfo.vue'
+
 import my from '@/page/my.vue'
 
 Vue.use(Router)
@@ -23,8 +26,13 @@ export default new Router({
     component: my
   },
   {
-    path: '/cart',
-    name: 'cart',
-    component: Cart
+    path: '/userCenter',
+    name: 'userCenter',
+    component: userCenter
+  },
+  {
+    path: '/changeInfo',
+    name: 'changeInfo',
+    component: changeInfo
   }]
 })

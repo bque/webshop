@@ -14,12 +14,15 @@
     <group class="m-t-0">
       <cell title="我的订单"></cell>
     </group>
-    <grid>
-      <grid-item v-for="(orderIcon,i) in orderIcons" :key="i" class="icon-block">
-        <span class="iconfont icon-size" :class="orderIcon.icons"></span>
-        <h6>{{orderIcon.title}}</h6>
-      </grid-item>
-    </grid>
+    <card class="m-10-t">
+      <div slot="content" class="card-demo-flex card-demo-content01">
+        <div class="vux-1px-r icon-block" v-for="(orderIcon,i) in orderIcons" :key="i">
+          <span class="iconfont icon-size" :class="orderIcon.icons"></span>
+          <br/>
+          <h5>{{orderIcon.title}}</h5>
+        </div>
+      </div>
+    </card>
      <group class="m-t-0">
       <cell title="收货地址" is-link></cell>
       <cell title="收藏中心" is-link></cell>
@@ -31,14 +34,15 @@
 
 
 <script>
-import { Grid, GridItem, Group, Cell } from 'vux'
+import { Grid, GridItem, Group, Cell, Card } from 'vux'
 
 export default {
   components: {
     Grid,
     GridItem,
     Group,
-    Cell
+    Cell,
+    Card
   },
   data () {
     return {
@@ -93,8 +97,13 @@ export default {
   text-align: center;
   background: #fff;
   border-right: 1px solid #fff !important;
+  display: inline-block;
+  padding: 10px 15px;
 }
 .icon-size {
   font-size: 25px;
+}
+.m-10-t {
+  margin-top: -10px;
 }
 </style>
