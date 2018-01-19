@@ -16,7 +16,9 @@
               </router-link>
             </div>
             <div class="right relative">
+              <!-- <router-link :to="{name:'gooddetail' ,query : {Id:'1222'}}"> -->
               <p class="firstP">{{item.name}}</p>
+              <!-- </router-link> -->
               <p>
                 <span class='opacity'>重量:{{item.weight}}</span>
                 <span class="positionRight opacity">修改</span>

@@ -17,11 +17,7 @@ export default {
   watch:{
   	 $route(){
   	 	window.scrollTo(0,0);
-	 	if(this.$route.name=='Home'){
-	 			document.location.reload()
-	 	}
-  		console.log(this.$route.name)
-  		window.document.title=this.$route.meta.title;  
+  		window.document.title=this.$route.meta.title;
   	 }
   }
 }

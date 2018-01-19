@@ -7,6 +7,7 @@ import Classification from '@/page/classification.vue'
 import My from '@/page/my.vue'
 
 import ChooseStores from '@/page/home/ChooseStores.vue' // 首页
+import GoodDetails from '@/page/home/goodDetail.vue'
 
 import GoodList from '@/page/classification/goodList.vue' // 分类
 
@@ -35,7 +36,7 @@ import Good from '@/components/good.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [{
     path: '/',
     redirect: 'home'
@@ -79,6 +80,14 @@ export default new Router({
       title: '选择门店'
     },
     component: ChooseStores
+  },
+  {
+    path: '/gooddetail',
+    name: 'gooddetail',
+    meta: {
+      title: '选择门店'
+    },
+    component: GoodDetails
   },
   {
     path: '/goodlist',
@@ -237,4 +246,3 @@ export default new Router({
   ]
 
 })
-
