@@ -14,11 +14,7 @@
 				</router-link>
 			</li>
 			<li :class="{active:activeNum==3}" >
-<<<<<<< HEAD
-				<router-link to='/home'>
-=======
 				<router-link to='/YOU'  >
->>>>>>> da0528ba631260ce4483ab27f7b2071e19218775
 				<span class="iconfont icon-liwu"></span>
 				<h4>优惠券</h4>
 				</router-link>

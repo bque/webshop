@@ -38,17 +38,10 @@ export default new Router({
   {
     path: '/home',
     name: 'Home',
-<<<<<<< HEAD
     meta: {
       title: '首页'
     },
     component: Home
-=======
-    meta:{
-    	title:'主页'
-    },
-    component: Home 
->>>>>>> da0528ba631260ce4483ab27f7b2071e19218775
   },
   {
     path: '/my',
@@ -60,14 +53,10 @@ export default new Router({
   },
   {
     path: '/classification',
-<<<<<<< HEAD
     name: 'OrderResult',
     meta: {
       title: '分类'
     },
-=======
-    name: 'classification',
->>>>>>> da0528ba631260ce4483ab27f7b2071e19218775
     component: Classification
   },
   {
@@ -77,7 +66,6 @@ export default new Router({
       title: '购物车'
     },
     component: ShoppingCart
-<<<<<<< HEAD
   },
   {
     path: '/chooseStores',
@@ -202,11 +190,6 @@ export default new Router({
     component: Good
   }
   ]
-=======
-  }]
-  
-
->>>>>>> da0528ba631260ce4483ab27f7b2071e19218775
 
 })
 
