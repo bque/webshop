@@ -1,9 +1,12 @@
 <template>
   <div class="goodList">
-    <slot name='top'>
+    
+    <sticky scroll-box="" :check-sticky-support="false" class="sticky" v-if="true">
+			<slot name='top'>
       <div class="top">{{title}}</div>
     </slot>
-    <scroller lock-x height="39.2rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
+		</sticky>
+    <scroller lock-x height="59.2rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
       <div class="box1">
         <grid :cols='2' class='padding0'>
           <grid-item :link="{name:'gooddetail',query:{Id:'12'}}" v-for="i in bottomCount" :key="i" style="" class="item">
@@ -21,13 +24,14 @@
 </template>
 
 <script>
-import { Grid, GridItem, Scroller, LoadMore } from 'vux'
+import { Grid, GridItem, Scroller, LoadMore,Sticky } from 'vux'
 export default {
   components: {
     Grid,
     GridItem,
     Scroller,
-    LoadMore
+    LoadMore,
+    Sticky
   },
   props: {
     title: {
