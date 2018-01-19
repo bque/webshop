@@ -24,6 +24,9 @@ export default {
       place: '福州'
     }
   },
+  mounted:function(){
+    console.log('13133')
+  },
   methods: {
     onFocus() {
       this.place = ''

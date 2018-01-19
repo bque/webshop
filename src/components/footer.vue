@@ -14,7 +14,7 @@
 				</router-link>
 			</li>
 			<li :class="{active:activeNum==3}" >
-				<router-link to='/'>
+				<router-link to='/home'>
 				<span class="iconfont icon-liwu"></span>
 				<h4>优惠券</h4>
 				</router-link>

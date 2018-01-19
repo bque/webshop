@@ -105,7 +105,6 @@ export default {
       }
     },
     switchs(val) {
-      console.log(222222)
       this.bottomCount = val
       this.$nextTick(() => {
         this.$refs.scrollerBottom.reset({

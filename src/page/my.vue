@@ -29,15 +29,16 @@
       <cell title="客服中心" is-link></cell>
     </group>
     <goodList></goodList>
+    <footer>
+			<foot></foot>
+		</footer>
   </div>
 </template>
-
-
 
 <script>
 import { Grid, GridItem, Group, Cell, Card } from 'vux'
 import GoodList from '@/components/goodList.vue'
-
+import Foot from '@/components/footer.vue'
 export default {
   components: {
     Grid,
@@ -45,7 +46,8 @@ export default {
     Group,
     Cell,
     Card,
-    GoodList
+    GoodList,
+    Foot
   },
   data () {
     return {
