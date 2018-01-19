@@ -11,23 +11,24 @@
         </div>
       </div>
     </div>
-    <group class="m-t-0">
+    <group class="m-1-t">
       <cell title="我的订单"></cell>
     </group>
-    <card class="m-10-t">
+    <card class="m-t-0">
       <div slot="content" class="card-demo-flex card-demo-content01">
-        <div class="vux-1px-r icon-block" v-for="(orderIcon,i) in orderIcons" :key="i">
+        <div class="icon-block" v-for="(orderIcon,i) in orderIcons" :key="i">
           <span class="iconfont icon-size" :class="orderIcon.icons"></span>
           <br/>
           <h5>{{orderIcon.title}}</h5>
         </div>
       </div>
     </card>
-     <group class="m-t-0">
+     <group class="m-1-t">
       <cell title="收货地址" is-link></cell>
       <cell title="收藏中心" is-link></cell>
       <cell title="客服中心" is-link></cell>
     </group>
+    <goodList></goodList>
   </div>
 </template>
 
@@ -35,6 +36,7 @@
 
 <script>
 import { Grid, GridItem, Group, Cell, Card } from 'vux'
+import GoodList from '@/components/goodList.vue'
 
 export default {
   components: {
@@ -42,7 +44,8 @@ export default {
     GridItem,
     Group,
     Cell,
-    Card
+    Card,
+    GoodList
   },
   data () {
     return {
@@ -89,7 +92,7 @@ export default {
   color: #ffe09b;
   font-size: 14px;
 }
-.m-t-0 {
+.m-1-t {
   margin-top: -1.3em;
 }
 .icon-block {
@@ -103,7 +106,7 @@ export default {
 .icon-size {
   font-size: 25px;
 }
-.m-10-t {
-  margin-top: -10px;
+.m-t-0 {
+  margin-top: 0;
 }
 </style>
