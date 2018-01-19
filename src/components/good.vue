@@ -53,6 +53,7 @@ export default {
 .left {
   width: 25%;
   float: left;
+  height: 100%;
 }
 .left img {
   width: 75%;
@@ -63,6 +64,7 @@ export default {
   width: 70%;
   float: left;
   padding-left: 5%;
+  height: 100%;
 }
 .right .firstP {
   font-size: 0.9rem;
