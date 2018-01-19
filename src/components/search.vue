@@ -5,19 +5,20 @@
 				<div  class="address" slot="left">{{place}}</div>
 			</slot>
 			<slot name='right'>
-				<div  class="right"  slot="right">
-					<span class="iconfont icon-saoma"></span>
-				</div>
+				<!--<div  class="right"  slot="right">-->
+				<span class="iconfont icon-saoma rights" slot="right"></span>
+				<!--</div>-->
 			</slot>
 		</search>
 	</div>
 </template>
 
 <script>
-import { Search } from 'vux'
+import { Search} from 'vux'
 export default {
   components: {
     Search
+    
   },
   data() {
     return {
@@ -73,7 +74,7 @@ export default {
 
 <style scoped>
 .address,
-.right {
+.rights {
   margin: 0 10px;
   color: gray;
 }

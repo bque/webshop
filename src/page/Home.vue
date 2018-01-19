@@ -2,11 +2,11 @@
 <template>
 	<div class="home">
 		<header>
-			<search :show="true">
+			<search >
 			</search>
 		</header>
 		<section>
-			<swiper heights='10' :swiperList='swiperList'></swiper>
+			<swiper heights='10' :swiperList='swiperList' :direction='direction'></swiper>
 			<!--轮播图-->
 			<!--<advertisingTop></advertisingTop>-->
 			<!--优惠券等-->
@@ -97,7 +97,8 @@ export default {
         '../img/shoppingCart.png',
         '../img/MY.png'
       ],
-      srcBottomimg: '../img/MY.png'
+      srcBottomimg: '../img/MY.png',
+      direction:'right'
     }
   },
   methods: {

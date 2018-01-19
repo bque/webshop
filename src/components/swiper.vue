@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<swiper :list="demo01_list" :height="thisHeights" auto loop></swiper>
+		<swiper :list="demo01_list" :height="thisHeights" auto loop :dots-position='directions'></swiper>
 	</div>
 </template>
 
@@ -24,14 +24,15 @@ var baseList = [
   }
 ]
 export default {
-  props: ['swiperList', 'heights'],
+  props: ['swiperList', 'heights','direction'],
   components: {
     Swiper
   },
   data() {
     return {
       thisHeights: this.heights + 'rem',
-      demo01_list: this.swiperList
+      demo01_list: this.swiperList,
+      directions:this.direction
     }
   },
   mounted() {}

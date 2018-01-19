@@ -7,6 +7,7 @@ import Classification from '@/page/classification.vue'
 import My from '@/page/my.vue'
 
 import ChooseStores from '@/page/home/ChooseStores.vue' // 首页
+import GoodDetails from '@/page/home/goodDetail.vue' 
 
 import GoodList from '@/page/classification/goodList.vue' // 分类
 
@@ -41,7 +42,7 @@ export default new Router({
     meta: {
       title: '首页'
     },
-    component: Home
+    component: 	GoodDetails
   },
   {
     path: '/my',
