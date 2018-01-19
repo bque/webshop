@@ -47,7 +47,7 @@ export default new Router({
     meta: {
       title: '首页'
     },
-    component: WaitPayment
+    component: Home
   },
   {
     path: '/my',
