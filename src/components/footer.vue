@@ -78,6 +78,7 @@ export default {
   font-size: 1.4rem;
 }
 .footer ul li h4 {
+	
   font-weight: normal;
   font-size: 0.7rem;
   position: absolute;
