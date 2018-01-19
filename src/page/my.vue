@@ -1,38 +1,50 @@
 <template>
   <div>
-    <div class="top-column">
-      <div class="userinfo">
-        <div class="info-img">
-          <img src="../../static/img/logo.jpg" alt="">
-        </div>
-        <div class="info-text">
-          <p>昵称</p>
-          <p class="info-content">78.3小白信用分</p>
+    <router-link to="/userCenter">
+      <div class="top-column">
+        <div class="userinfo">
+          <div class="info-img">
+            <img src="../../static/img/logo.jpg" alt="">
+          </div>
+          <div class="info-text">
+            <p>昵称</p>
+            <p class="info-content">78.3小白信用分</p>
+          </div>
         </div>
       </div>
-    </div>
+    </router-link>
     <group class="m-1-t">
-      <cell title="我的订单"></cell>
+      <router-link to="/myOrder">
+        <cell title="我的订单"></cell>
+      </router-link>
     </group>
-    <card class="m-t-0">
+    <card class="m-t-0 text-content">
       <div slot="content" class="card-demo-flex card-demo-content01">
         <div class="icon-block" v-for="(orderIcon,i) in orderIcons" :key="i">
-          <span class="iconfont icon-size" :class="orderIcon.icons"></span>
-          <br/>
-          <h5>{{orderIcon.title}}</h5>
+          <router-link :to="orderIcon.url" >
+            <span class="iconfont icon-size" :class="orderIcon.icons"></span>
+            <br/>
+            <h5>{{orderIcon.title}}</h5>
+          </router-link>
         </div>
       </div>
     </card>
-     <group class="m-1-t">
+    <group class="m-1-t">
+      <router-link to="/address">
       <cell title="收货地址" is-link></cell>
+      </router-link>
+      <router-link to="/home">
       <cell title="收藏中心" is-link></cell>
+      </router-link>
+      <router-link to="/home">
       <cell title="客服中心" is-link></cell>
+      </router-link>
     </group>
     <goodList></goodList>
     <footer>
-			<foot></foot>
-		</footer>
-  </div>
+      <foot></foot>
+    </footer>
+    </div>
 </template>
 
 <script>
@@ -49,14 +61,14 @@ export default {
     GoodList,
     Foot
   },
-  data () {
+  data() {
     return {
       orderIcons: [
-        {icons: 'icon-yinhangqia-xianxing', title: '待付款'},
-        {icons: 'icon-baoguofahuo-xianxing', title: '待发货'},
-        {icons: 'icon-yunshuzhongwuliu-xianxing', title: '待收货'},
-        {icons: 'icon-liaotianduihua-xianxing', title: '待收货'},
-        {icons: 'icon-tuikuan', title: '退款/售后'}
+        { url:'/waitPayment', icons: 'icon-yinhangqia-xianxing', title: '待付款' },
+        { url:'/waitDelivery',icons: 'icon-baoguofahuo-xianxing', title: '待发货' },
+        { url:'/waitGood',icons: 'icon-yunshuzhongwuliu-xianxing', title: '待收货' },
+        { url:'/waitEvaluation',icons: 'icon-liaotianduihua-xianxing', title: '待评价' },
+        { url:'/refund',icons: 'icon-tuikuan', title: '退款/售后' }
       ]
     }
   },
@@ -98,17 +110,26 @@ export default {
   margin-top: -1.3em;
 }
 .icon-block {
-  color: #f05c3a;
   text-align: center;
   background: #fff;
   border-right: 1px solid #fff !important;
   display: inline-block;
   padding: 10px 15px;
 }
+.icon-block a {
+  color: #f05c3a;
+}
 .icon-size {
   font-size: 25px;
 }
 .m-t-0 {
   margin-top: 0;
+}
+.text-content {
+  text-align: center;
+}
+a {
+  color: #333;
+  font-size: 16px;
 }
 </style>

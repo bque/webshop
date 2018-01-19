@@ -4,7 +4,6 @@
  		<div class="title" slot='top'>
 			<x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
 			键盘
-			
 		</div>
  	</goodList>
  </div>
@@ -17,8 +16,10 @@
 		components:{
 			OrderResultTop,
 			GoodList
-		}
-		
+    },
+    mounted: function(){
+      // console.log('商品列表加参数'+ this.$route.query.Id)
+    }
 	}
 </script>
 

@@ -1,28 +1,27 @@
 <template>
-	<div class="classification">
-		<div class="left">
-			<ul>
-				<li v-for="(value,index) in goodsList" :class="{active:current[index]}" @click="switchGood(index)">{{value.name}}</li>
+  <div class="classification">
+    <div class="left">
+      <ul>
+        <li v-for="(value,index) in goodsList" :class="{active:current[index]}" @click="switchGood(index)">
+          {{value.name}}
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="wrap" v-for="(value,index) in goodsList[goodnameNum].good">
+        <p>{{value.listName}}</p>
+        <ul class="clearfix wrapHeight">
+          <li v-for="(val,indexs) in value.goodList" class="liHeight">
+            <router-link :to="{name:'goodlist' ,query : {Id:'1222'}}">
+              <img src="http://hkimg.yonghuigo.com/yhht/01/c0ce3c191a51bf28a33a16bddc30cabf-220-220.jpg" />
+              <h5>{{val.good}}</h5>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-			</ul>
-
-		</div>
-		<div class="right">
-			<div class="wrap" v-for="(value,index) in goodsList[goodnameNum].good">
-				<p>{{value.listName}}</p>
-				<ul class="clearfix wrapHeight">
-
-					<li v-for="(val,indexs) in value.goodList" class="liHeight">
-						<img src="http://hkimg.yonghuigo.com/yhht/01/c0ce3c191a51bf28a33a16bddc30cabf-220-220.jpg" />
-						<router-link to='/goodList'>
-						<h5>{{val.good}}</h5>
-						</router-link>
-					</li>
-				</ul>
-			</div>
-		</div>
-		
-	</div>
+  </div>
 
 </template>
 

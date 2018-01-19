@@ -49,8 +49,7 @@
 				<a class="total">实付款:
 					<span class="money smallFont">￥5799</span>
 				</a>
-				<a class="settlement">提交订单</a>
-
+				<router-link to="/checkstand" class="settlement">提交订单</router-link>
 			</div>
 		</group>
 	</div>

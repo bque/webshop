@@ -1,20 +1,22 @@
 <template>
   <div>
     <div class="address-bolck" v-for="(location,index) in locations">
-      <div class="address-icon">
-        <a class="icon iconfont icon-weizhi"></a>
-      </div>
-      <div class="icon-right">
-        <a class=" icon iconfont icon-dayuhao"></a>
-      </div>
-      <div class="vux-cell-box  address">
-        <p>
-          <span class="name">{{location.name}}</span>
-          <span class="tel">{{location.phone}}</span>
-          <a class="default" v-show="{isShow:index='0'}">默认</a>
-        </p>
-        <p class="addressP">{{location.place}}</p>
-      </div>
+      <router-link :to="{name:'newaddress', query : {Id:'1222'}}">
+        <div class="address-icon">
+          <a class="icon iconfont icon-weizhi"></a>
+        </div>
+        <div class="icon-right">
+          <a class=" icon iconfont icon-dayuhao"></a>
+        </div>
+        <div class="vux-cell-box  address">
+          <p>
+            <span class="name">{{location.name}}</span>
+            <span class="tel">{{location.phone}}</span>
+            <a class="default" v-show="{isShow:index='0'}">默认</a>
+          </p>
+          <p class="addressP">{{location.place}}</p>
+        </div>
+      </router-link>
     </div>
   </div>
 
@@ -35,7 +37,7 @@ export default {
           place: '广东 深圳 宝安区 详细地址......'
         }
       ],
-      isShow:''
+      isShow: ''
     }
   }
 }

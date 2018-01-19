@@ -13,6 +13,7 @@ import GoodList from '@/page/classification/goodList.vue' // 分类
 import Checkstand from '@/page/shoppingCart/checkstand.vue' // 购物车
 import OrderResult from '@/page/shoppingCart/orderResult.vue'
 import OrderDetail from '@/page/shoppingCart/orderDetail.vue'
+import FillOrder from '@/page/shoppingCart/fillOrder.vue'
 
 import UserCenter from '@/page/mine/userCenter.vue' // 我的页面
 import ChangeInfo from '@/page/mine/changeInfo.vue'
@@ -22,7 +23,11 @@ import Password from '@/page/mine/password.vue'
 import About from '@/page/mine/about.vue'
 import Refund from '@/page/mine/refund.vue'
 import WaitPayment from '@/page/mine/waitPayment.vue'
+import WaitDelivery from '@/page/mine/waitDelivery.vue'
+import WaitGood from '@/page/mine/waitGood.vue'
+import WaitEvaluation from '@/page/mine/waitEvaluation.vue'
 import ApplyRefund from '@/page/mine/applyRefund.vue'
+import MyOrder from '@/page/mine/myOrder.vue'
 
 import Cart from '@/components/cart.vue'
 import Good from '@/components/good.vue'
@@ -108,6 +113,14 @@ export default new Router({
     component: OrderDetail
   },
   {
+    path: '/fillorder',
+    name: 'fillorder',
+    meta: {
+      title: '填写订单'
+    },
+    component: FillOrder
+  },
+  {
     path: '/usercenter',
     name: 'usercenter',
     meta: {
@@ -172,12 +185,44 @@ export default new Router({
     component: WaitPayment
   },
   {
+    path: '/waitDelivery',
+    name: 'waitDelivery',
+    meta: {
+      title: '待付款'
+    },
+    component: WaitDelivery
+  },
+  {
+    path: '/waitGood',
+    name: 'waitGood',
+    meta: {
+      title: '待付款'
+    },
+    component: WaitGood
+  },
+  {
+    path: '/waitEvaluation',
+    name: 'waitEvaluation',
+    meta: {
+      title: '待付款'
+    },
+    component: WaitEvaluation
+  },
+  {
     path: '/applyrefund',
     name: 'applyrefund',
     meta: {
       title: '申请退款'
     },
     component: ApplyRefund
+  },
+  {
+    path: '/myOrder',
+    name: 'myOrder',
+    meta: {
+      title: '我的订单'
+    },
+    component: MyOrder
   },
   {
     path: '/cart',

@@ -26,7 +26,6 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped>
 	section{margin: 0;}
-
 </style>

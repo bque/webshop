@@ -10,7 +10,10 @@
         <ul class="shopGoods">
           <li class="clearfix shopGoodsLi" v-for="(item,indexs) in value.goods">
             <div class="left">
-              <input type="checkbox" v-model="item.check" @click="checkItem(index,indexs)" /><img :src='item.img' align="absmiddle" />
+              <input type="checkbox" v-model="item.check" @click="checkItem(index,indexs)" />
+              <router-link :to="{name:'gooddetail' ,query : {Id:'1222'}}">
+                <img :src='item.img' align="absmiddle" />
+              </router-link>
             </div>
             <div class="right relative">
               <p class="firstP">{{item.name}}</p>
@@ -37,8 +40,7 @@
       <a class="total">合计:
         <span class="money smallFont">￥{{totalMoney}}</span>
       </a>
-      <a class="settlement">去结算(1)</a>
-
+      <router-link :to="{name:'fillorder',query:{Id:'122'}}" class="settlement">去结算(1)</router-link>
     </div>
   </div>
 

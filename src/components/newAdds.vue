@@ -6,17 +6,15 @@
             <x-address title="地区" v-model="place" raw-value :list="addressData" value-text-align="left"></x-address>
             <x-input title="地址" placeholder="必填" v-model="adds"></x-input>
         </group>
-        <x-button type="warn" action-type="reset" class="btn-place">保存</x-button>
     </div>
 </template>
 <script>
-import { Group, XInput, XAddress, ChinaAddressV4Data, XButton } from 'vux'
+import { Group, XInput, XAddress, ChinaAddressV4Data} from 'vux'
 export default {
   components: {
     Group,
     XInput,
-    XAddress,
-    XButton
+    XAddress
   },
   data() {
     return {
@@ -30,11 +28,6 @@ export default {
 }
 </script>
 <style scoped>
-.btn-place {
-  position: fixed;
-  bottom: 0;
-  border-radius: 0;
-}
 .m-1-t {
   margin-top: -1.3em;
 }

@@ -49,8 +49,7 @@
 				<a class="total">实付款:
 					<span class="money smallFont">￥5799</span>
 				</a>
-				<a class="settlement">申请退款</a>
-
+				<router-link to="/applyRefund" class="settlement">申请退款</router-link>
 			</div>
 		</group>
 	</div>

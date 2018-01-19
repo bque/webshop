@@ -20,9 +20,8 @@ export default {
 	 	if(this.$route.name=='Home'){
 	 			document.location.reload()
 	 	}
-  	 
   		console.log(this.$route.name)
-  		window.document.title=this.$route.meta.title;
+  		window.document.title=this.$route.meta.title;  
   	 }
   }
 }

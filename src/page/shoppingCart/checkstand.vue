@@ -1,34 +1,37 @@
 <template>
-	<div class="checkstand">
-		<div class="title topLine">
-			<x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
-			京东收银台
-			<span class="positionRight"> 订单中心</span>
-		</div>
-		<group>
-
-			<div class="cell topLine">
-				<span class="">订单金额</span>
-				<span class="money">5799.00元</span>
-			</div>
-			<div class="cellPay">
-				<div class="left"><img src="../../../static/img/wei.png" /></div>
-				<div class="right">
-					<p>微信支付</p>
-					<p class="opacity">微信安全支付</p>
-					<x-icon type="ios-arrow-right" size="30" class="iconR"></x-icon>
-				</div>
-			</div>
-			<div class=" cellPay">
-				<div class="left"><img src="../../../static/img/yin.png" /></div>
-				<div class="right">
-					<p>银联支付</p>
-					<p class="opacity">银联安全支付</p>
-					<x-icon type="ios-arrow-right" size="30" class="iconR"></x-icon>
-				</div>
-			</div>
-		</group>
-	</div>
+  <div class="checkstand">
+    <div class="title topLine">
+      <x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
+      京东收银台
+      <span class="positionRight"> 订单中心</span>
+    </div>
+    <group>
+      <div class="cell topLine">
+        <span class="">订单金额</span>
+        <span class="money">5799.00元</span>
+      </div>
+      <div class="cellPay">
+        <router-link to="/orderResult">
+          <div class="left"><img src="../../../static/img/wei.png" /></div>
+          <div class="right">
+            <p>微信支付</p>
+            <p class="opacity">微信安全支付</p>
+            <x-icon type="ios-arrow-right" size="30" class="iconR"></x-icon>
+          </div>
+        </router-link>
+      </div>
+      <div class=" cellPay">
+        <router-link to="/orderResult">
+          <div class="left"><img src="../../../static/img/yin.png" /></div>
+          <div class="right">
+            <p>银联支付</p>
+            <p class="opacity">银联安全支付</p>
+            <x-icon type="ios-arrow-right" size="30" class="iconR"></x-icon>
+          </div>
+        </router-link>
+      </div>
+    </group>
+  </div>
 </template>
 
 <script>
