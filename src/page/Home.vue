@@ -2,7 +2,8 @@
 <template>
 	<div class="home">
 		<header>
-			<search></search>
+			<search :show="true">
+			</search>
 		</header>
 		<section>
 			<swiper heights='10' :swiperList='swiperList'></swiper>
