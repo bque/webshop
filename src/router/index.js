@@ -237,11 +237,6 @@ export default new Router({
     path: '/cart',
     name: 'cart',
     component: Cart
-  },
-  {
-    path: '/good',
-    name: 'good',
-    component: Good
   }
   ]
 
