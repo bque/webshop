@@ -1,28 +1,32 @@
 <template>
 	<div class="header">
 		<search class="search" placeholder="搜索" auto-scroll-to-top top="0" position="fixed" @on-focus="onFocus" @on-cancel="onCancel" @on-submit="onSubmit" ref="search">
-			<slot name='left' slot="left">
-				<div slot="left" class="address">{{place}}</div>
+			<slot name='left' >
+				<div  class="address" slot="left">{{place}}</div>
 			</slot>
-			<slot name='right' slot="right">
-				<div slot="right" class="right">
-					<span class="iconfont icon-saoma"></span>
-				</div>
+			<slot name='right'>
+				<!--<div  class="right"  slot="right">-->
+				<span class="iconfont icon-saoma rights" slot="right"></span>
+				<!--</div>-->
 			</slot>
 		</search>
 	</div>
 </template>
 
 <script>
-import { Search } from 'vux'
+import { Search} from 'vux'
 export default {
   components: {
     Search
+    
   },
   data() {
     return {
       place: '福州'
     }
+  },
+  mounted:function(){
+    console.log('13133')
   },
   methods: {
     onFocus() {
@@ -70,7 +74,7 @@ export default {
 
 <style scoped>
 .address,
-.right {
+.rights {
   margin: 0 10px;
   color: gray;
 }

@@ -12,6 +12,7 @@
 		<footer>
 			<foot :activeNums='2'></foot>
 		</footer>
+		
 	</div>
 </template>
 

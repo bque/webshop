@@ -13,6 +13,12 @@ export default {
     if (this.$route.path == '/') {
       console.log(222)
     }
+  },
+  watch:{
+  	 $route(){
+  	 	window.scrollTo(0,0);
+  		window.document.title=this.$route.meta.title;
+  	 }
   }
 }
 </script>
@@ -22,5 +28,13 @@ export default {
 @import '../static/css/iconfont.css';
 body {
   background-color: #fbf9fe;
+}
+ a {
+    text-decoraction: none;
+    color: gray;
+}
+#app .router-link-active {
+    text-decoration: none;
+    color: red;
 }
 </style>

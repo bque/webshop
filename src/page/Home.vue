@@ -2,10 +2,11 @@
 <template>
 	<div class="home">
 		<header>
-			<search></search>
+			<search >
+			</search>
 		</header>
 		<section>
-			<swiper heights='10' :swiperList='swiperList'></swiper>
+			<swiper heights='10' :swiperList='swiperList' :direction='direction'></swiper>
 			<!--轮播图-->
 			<!--<advertisingTop></advertisingTop>-->
 			<!--优惠券等-->
@@ -25,7 +26,7 @@
 <!--<style scoped>
 
 </style>-->
-<style lang="less">
+<style lang="less" scoped>
 @import '~vux/src/styles/1px.less';
 header {
   position: fixed;
@@ -96,7 +97,8 @@ export default {
         '../img/shoppingCart.png',
         '../img/MY.png'
       ],
-      srcBottomimg: '../img/MY.png'
+      srcBottomimg: '../img/MY.png',
+      direction:'right'
     }
   },
   methods: {

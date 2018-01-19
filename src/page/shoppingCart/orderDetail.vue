@@ -2,10 +2,10 @@
 	<div class="fillOrder">
 		<div class="title">
 			<x-icon type="ios-arrow-back" class="icon" size="30"></x-icon>
-			填写订单
+			订单详情
 		</div>
 		<group>
-			<div class="vux-cell-box weui-cell_access vux-tap-active address">
+			<div class="vux-cell-box  address">
 				<p>
 					<span class="name">陈胜</span>
 					<span class="tel">181****4621</span>
@@ -29,10 +29,10 @@
 				</div>
 
 			</div>
-			<cell title="支付方式" value="微信支付" is-link class='cell'></cell>
-			<cell title="配送方式" value="免邮" is-link class='cell'></cell>
-			<cell title="优惠券" value="无可用" is-link class="borderTB cell"></cell>
-
+			<div class="vux-cell-box content ">
+				<p>订单编号 : 16464646766467649</p>
+				<p >创建时间 : 2017-1-1 12 : 58 : 58</p>
+			</div>
 			<div class="result">
 				<p>
 					<span class="bottomleft">商品金额</span>
@@ -49,7 +49,7 @@
 				<a class="total">实付款:
 					<span class="money smallFont">￥5799</span>
 				</a>
-				<router-link to="/checkstand" class="settlement">提交订单</router-link>
+				<router-link to="/applyRefund" class="settlement">申请退款</router-link>
 			</div>
 		</group>
 	</div>
@@ -103,6 +103,13 @@ export default {
 .address {
   padding: 1rem;
   font-size: 1rem;
+}
+.content{
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  border-bottom: 5px solid #F0F0F0;
+  line-height: 1.5rem;
 }
 .relative {
   position: relative;
