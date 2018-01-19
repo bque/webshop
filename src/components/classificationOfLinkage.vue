@@ -14,12 +14,14 @@
 
 					<li v-for="(val,indexs) in value.goodList" class="liHeight">
 						<img src="http://hkimg.yonghuigo.com/yhht/01/c0ce3c191a51bf28a33a16bddc30cabf-220-220.jpg" />
+						<router-link to='/goodList'>
 						<h5>{{val.good}}</h5>
-
+						</router-link>
 					</li>
 				</ul>
 			</div>
 		</div>
+		
 	</div>
 
 </template>

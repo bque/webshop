@@ -32,6 +32,9 @@ export default new Router({
   {
     path: '/home',
     name: 'Home',
+    meta:{
+    	title:'主页'
+    },
     component: Home 
   },
   {
@@ -42,13 +45,15 @@ export default new Router({
 
    {
     path: '/classification',
-    name: 'OrderResult',
+    name: 'classification',
     component: Classification
   },
   {
     path: '/shoppingCart',
     name: 'cart',
     component: ShoppingCart
-  }]
+  }],
+  
 
 })
+
