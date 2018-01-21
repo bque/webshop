@@ -4,7 +4,7 @@
       <span style="color: #333;">修改密码</span>
     </x-header>
 
-    <group label-width="4em" label-margin-right="2em" label-align="justify" class="m-1-t">
+    <group label-width="4.2em" label-margin-right="1em" label-align="justify" class="m-1-t">
       <x-input title="当前密码" type="password" v-model="passwords"></x-input>
       <x-input title="新密码" type="password" v-model="passwords1"></x-input>
       <x-input title="确认密码" type="password" v-model="passwords2"></x-input>

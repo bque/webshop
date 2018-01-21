@@ -18,7 +18,8 @@
         <cell title="我的订单"></cell>
       </router-link>
     </group>
-    <card class="m-t-0 text-content">
+
+     <card class="m-t-0">
       <div slot="content" class="card-demo-flex card-demo-content01">
         <div class="icon-block" v-for="(orderIcon,i) in orderIcons" :key="i">
           <router-link :to="orderIcon.url" >
@@ -29,6 +30,7 @@
         </div>
       </div>
     </card>
+
     <group class="m-1-t">
       <router-link to="/address">
       <cell title="收货地址" is-link></cell>
@@ -109,13 +111,6 @@ export default {
 .m-1-t {
   margin-top: -1.3em;
 }
-.icon-block {
-  text-align: center;
-  background: #fff;
-  border-right: 1px solid #fff !important;
-  display: inline-block;
-  padding: 10px 15px;
-}
 .icon-block a {
   color: #f05c3a;
 }
@@ -125,11 +120,19 @@ export default {
 .m-t-0 {
   margin-top: 0;
 }
-.text-content {
-  text-align: center;
-}
 a {
   color: #333;
   font-size: 16px;
+}
+.card-demo-flex {
+  display: -webkit-box;
+}
+.card-demo-content01 {
+  padding: 10px 0;
+}
+.card-demo-flex > div {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
 }
 </style>
