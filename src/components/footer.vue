@@ -85,6 +85,7 @@ export default {
   bottom: -0.7rem;
   left: 50%;
   transform: translate(-50%, 0);
+	width: 100%;
 }
  /*.active {
   color: red !important;

@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<!--待付款-->
+    <x-header class="tilte-header">
+			<span style="color: #333;">待付款</span>
+		</x-header>
 		<good :list="goodList"></good>
 	</div>
 
@@ -8,10 +10,12 @@
 
 <script>
 import Good from '@/components/good.vue'
+import { XHeader } from 'vux'
 
 export default {
   components: {
-    Good
+    Good,
+    XHeader
   },
   data() {
     return {
@@ -45,3 +49,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.tilte-header {
+  background-color: #fff;
+}
+</style>
