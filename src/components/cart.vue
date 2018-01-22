@@ -251,7 +251,7 @@ export default {
 }
 
 .shopGoods .left img {
- 
+ height:5.1rem;
   margin-left: 5%;
 }
 
