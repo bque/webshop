@@ -33,7 +33,7 @@ export default {
 .m-1-t {
   margin-top: -1.3em;
 }
-a{
-  color:#333;
+a {
+  color: #333;
 }
 </style>

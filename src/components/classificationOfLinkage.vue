@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       goodnameNum: 0,
       current: [],
@@ -374,15 +374,14 @@ export default {
     }
   },
   methods: {
-    switchGood(index) {
+    switchGood (index) {
       this.current = []
       this.current[index] = true
       this.goodnameNum = index
       this.setHeight()
     },
-    setHeight() {
-      this.$nextTick(function() {
-        var row = Math.ceil(num)
+    setHeight () {
+      this.$nextTick(function () {
         var liHeight = 6
         var ulDom = document.getElementsByClassName('wrapHeight')
         for (var i = 0; i < ulDom.length; i++) {
@@ -394,15 +393,15 @@ export default {
       })
     }
   },
-  mounted() {
+  mounted () {
     this.setHeight()
   },
-  created() {
+  created () {
     this.current[0] = true
   },
   watch: {
-    current() {
-      //				this.setHeight();
+    current () {
+      // this.setHeight();
     }
   }
 }

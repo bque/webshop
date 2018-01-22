@@ -1,21 +1,21 @@
 <template>
 
-	<div class="advertisingTop">
-		<ul>
-			<li>
-				<img src="../../static/img/shop-record.jpg" />
-				<p>优惠券</p>
-			</li>
-			<li>
-				<img src="../../static/img/home-member-card.jpg" />
-				<p>会员卡</p>
-			</li>
-			<li>
-				<img src="../../static/img/money-card.jpg" />
-				<p>储值卡</p>
-			</li>
-		</ul>
-	</div>
+  <div class="advertisingTop">
+    <ul>
+      <li>
+        <img src="../../static/img/shop-record.jpg" />
+        <p>优惠券</p>
+      </li>
+      <li>
+        <img src="../../static/img/home-member-card.jpg" />
+        <p>会员卡</p>
+      </li>
+      <li>
+        <img src="../../static/img/money-card.jpg" />
+        <p>储值卡</p>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
     Grid,
     GridItem
   },
-  data() {
+  data () {
     return {
       contentOne: '优惠券',
       contentTwo: '会员卡',

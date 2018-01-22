@@ -1,9 +1,9 @@
 <template>
-	<grid :cols='1'>
-		<grid-item link="/conment/1" v-for="(value,index) in src" :key="index" class=" RectangleAdvertising" :style="{ 'background-image': 'url(' +value + ')'}" style="background-size:100% 100% ; height: 8rem;">
-		</grid-item>
+  <grid :cols='1'>
+    <grid-item link="/conment/1" v-for="(value,index) in src" :key="index" class=" RectangleAdvertising" :style="{ 'background-image': 'url(' +value + ')'}" style="background-size:100% 100% ; height: 8rem;">
+    </grid-item>
 
-	</grid>
+  </grid>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
     GridItem
   },
   props: ['imgSrc'],
-  data() {
+  data () {
     return {
       src: this.imgSrc
     }

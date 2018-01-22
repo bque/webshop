@@ -1,18 +1,17 @@
 <template>
-	<div class="title">
-			<x-icon type="ios-arrow-back" class="icon" size="30"></x-icon>
-			订单详情
-	</div>
+  <div class="title">
+    <x-icon type="ios-arrow-back" class="icon" size="30"></x-icon>
+    订单详情
+  </div>
 </template>
 
 <script>
 </script>
 
 <style scoped>
-	.title {
+.title {
   width: 100%;
   height: 3rem;
-  color: ;
   background: white;
   font-size: 1.2rem;
   text-align: center;

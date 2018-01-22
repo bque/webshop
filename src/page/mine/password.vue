@@ -26,7 +26,7 @@ export default {
     XHeader,
     XButton
   },
-  data() {
+  data () {
     return {
       passwords: '',
       passwords1: '',

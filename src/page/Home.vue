@@ -1,27 +1,27 @@
 <!--eslint-disable-->
 <template>
-	<div class="home">
-		<header>
-			<search >
-			</search>
-		</header>
-		<section>
-			<swiper heights='10' :swiperList='swiperList' :direction='direction'></swiper>
-			<!--轮播图-->
-			<!--<advertisingTop></advertisingTop>-->
-			<!--优惠券等-->
-			<letters></letters>
-			<!--新华都快报-->
-			<fourDdvertising :imgSrc='src'></fourDdvertising>
-			<RectangularAdvertising :imgSrc='src'> </RectangularAdvertising>
-			<!--长方形广告区-->
-			<bottomGoods></bottomGoods>
-			<!--热销商品-->
-		</section>
-		<footer>
-			<foot></foot>
-		</footer>
-	</div>
+  <div class="home">
+    <header>
+      <search>
+      </search>
+    </header>
+    <section>
+      <swiper heights='10' :swiperList='swiperList' :direction='direction'></swiper>
+      <!--轮播图-->
+      <!--<advertisingTop></advertisingTop>-->
+      <!--优惠券等-->
+      <letters></letters>
+      <!--新华都快报-->
+      <fourDdvertising :imgSrc='src'></fourDdvertising>
+      <RectangularAdvertising :imgSrc='src'> </RectangularAdvertising>
+      <!--长方形广告区-->
+      <bottomGoods></bottomGoods>
+      <!--热销商品-->
+    </section>
+    <footer>
+      <foot></foot>
+    </footer>
+  </div>
 </template>
 <!--<style scoped>
 
@@ -78,7 +78,7 @@ export default {
     BottomGoods,
     Foot
   },
-  data() {
+  data () {
     return {
       swiperList: baseList,
       bottomCount: 20,
@@ -98,18 +98,17 @@ export default {
         '../img/MY.png'
       ],
       srcBottomimg: '../img/MY.png',
-      direction:'right'
+      direction: 'right'
     }
   },
   methods: {
-    turnTo: function() {
-      console.log(this.$router.params)
+    turnTo: function () {
       this.$router.push('/conment/3')
     },
-    demo01_onIndexChange(index) {
+    demo01_onIndexChange (index) {
       this.demo01_index = index
     },
-    onScrollBottom() {
+    onScrollBottom () {
       if (this.onFetching) {
         // do nothing
       } else {
@@ -123,8 +122,7 @@ export default {
         }, 1500)
       }
     },
-    switchs(val) {
-      console.log(222222)
+    switchs (val) {
       this.bottomCount = val
       this.$nextTick(() => {
         this.$refs.scrollerBottom.reset({
@@ -132,25 +130,23 @@ export default {
         })
       })
     },
-    resultClick(item) {
+    resultClick (item) {
       window.alert('you click the result item: ' + JSON.stringify(item))
     },
-    getResult(val) {},
-    onSubmit() {
+    getResult (val) {},
+    onSubmit () {
       this.$refs.search.setBlur()
       this.$vux.toast.show({
-        //					type: 'text',
-        //					position: 'fixed',
-        //					text: 'on submit'
+        // type: 'text',
+        // position: 'fixed',
+        // text: 'on submit'
       })
     },
-    onFocus() {
+    onFocus () {
       this.place = ''
-      console.log(this.$refs.search)
     },
-    onCancel() {
+    onCancel () {
       this.place = '福州'
-      console.log('on cancel')
     }
   }
 }

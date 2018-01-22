@@ -1,11 +1,11 @@
 <template>
-	<div>
-		<x-header class="tilte-header">
-			<span style="color: #333;">退款/售后</span>
-		</x-header>
-		<goodB :list='list' :mark='false'>
-		</goodB>
-	</div>
+  <div>
+    <x-header class="tilte-header">
+      <span style="color: #333;">退款/售后</span>
+    </x-header>
+    <goodB :list='list' :mark='false'>
+    </goodB>
+  </div>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     goodB,
     XHeader
   },
-  data() {
+  data () {
     return {
       list: [
         {

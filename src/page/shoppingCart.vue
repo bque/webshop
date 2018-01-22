@@ -19,13 +19,12 @@ export default {
     Cart,
     Foot,
     GoodList
-  },
-  data() {
-    return {}
   }
 }
 </script>
 
 <style scoped>
-	section{margin: 0;}
+section {
+  margin: 0;
+}
 </style>

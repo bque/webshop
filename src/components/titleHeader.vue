@@ -1,13 +1,13 @@
 <template>
-    <x-header class="tilte-header">
-        <span style="color: #333;">{{title}}</span>
-    </x-header>
+  <x-header class="tilte-header">
+    <span style="color: #333;">{{title}}</span>
+  </x-header>
 </template>
 <script>
 import { XHeader } from 'vux'
 export default {
   components: {
-	XHeader
+    XHeader
   },
   props: ['title']
 }

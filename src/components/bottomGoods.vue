@@ -1,73 +1,73 @@
 <template>
-	<div class="wrap">
-		<sticky scroll-box="" :check-sticky-support="false" class="sticky" v-if="tabShow">
-			<tab :line-width="1" style="" class="classification ">
-				<tab-item selected @click.native="switchs(10)">今日推荐</tab-item>
-				<tab-item @click.native="switchs(5)">酒水饮料</tab-item>
-				<tab-item @click.native="switchs(5)">粮油副食</tab-item>
-				<tab-item @click.native="switchs(5)">个护美妆</tab-item>
-				<span style="" class="more iconfont icon-dayuhao" @click="switchTab">
-				</span>
-			</tab>
-		</sticky>
-		<div class="moreClass" v-if="!tabShow" @click="switchTab">
-			<div class="top">
-				<h2>切换分类</h2>
-				<span class=" iconfont icon-dayuhao1" @click="switchTab"></span>
-				<hr />
-				<ul>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-					<li>
-						<a>新品上架</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!--		<div class="vux-sticky-fill" style="height:44px;"></div>-->
+  <div class="wrap">
+    <sticky scroll-box="" :check-sticky-support="false" class="sticky" v-if="tabShow">
+      <tab :line-width="1" style="" class="classification ">
+        <tab-item selected @click.native="switchs(10)">今日推荐</tab-item>
+        <tab-item @click.native="switchs(5)">酒水饮料</tab-item>
+        <tab-item @click.native="switchs(5)">粮油副食</tab-item>
+        <tab-item @click.native="switchs(5)">个护美妆</tab-item>
+        <span style="" class="more iconfont icon-dayuhao" @click="switchTab">
+        </span>
+      </tab>
+    </sticky>
+    <div class="moreClass" v-if="!tabShow" @click="switchTab">
+      <div class="top">
+        <h2>切换分类</h2>
+        <span class=" iconfont icon-dayuhao1" @click="switchTab"></span>
+        <hr />
+        <ul>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+          <li>
+            <a>新品上架</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--		<div class="vux-sticky-fill" style="height:44px;"></div>-->
 
-		<scroller lock-x height="45rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
-			<div class="box1">
-				<grid :cols='2' class='padding0'>
-					<grid-item link="/conment/1" v-for="i in bottomCount" :key="i" style="" class="item">
-						<!--		<span class="grid-center">{{i}}</span>-->
-						<img src="http://app.nhd-mart.com/xhdshop/upload/image/201612/77332af9-1222-48ba-9f16-2a11e84653ff-medium.jpg" />
-						<div class="content">
-							<h3>鲁花压榨花生油4L</h3>
-							<span>￥115.80</span>
-						</div>
-					</grid-item>
+    <scroller lock-x height="45rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
+      <div class="box1">
+        <grid :cols='2' class='padding0'>
+          <grid-item link="/conment/1" v-for="i in bottomCount" :key="i" style="" class="item">
+            <!--		<span class="grid-center">{{i}}</span>-->
+            <img src="http://app.nhd-mart.com/xhdshop/upload/image/201612/77332af9-1222-48ba-9f16-2a11e84653ff-medium.jpg" />
+            <div class="content">
+              <h3>鲁花压榨花生油4L</h3>
+              <span>￥115.80</span>
+            </div>
+          </grid-item>
 
-				</grid>
-				<load-more tip="loading"></load-more>
-			</div>
-		</scroller>
-	</div>
+        </grid>
+        <load-more tip="loading"></load-more>
+      </div>
+    </scroller>
+  </div>
 </template>
 
 <script>
@@ -90,13 +90,13 @@ export default {
     }
   },
   methods: {
-    onScrollBottom() {
+    onScrollBottom () {
       if (this.onFetching) {
         // do nothing
       } else {
         this.onFetching = true
         setTimeout(() => {
-          //						this.bottomCount += 10
+          // this.bottomCount += 10
           this.$nextTick(() => {
             this.$refs.scrollerBottom.reset()
           })
@@ -104,7 +104,7 @@ export default {
         }, 1500)
       }
     },
-    switchs(val) {
+    switchs (val) {
       this.bottomCount = val
       this.$nextTick(() => {
         this.$refs.scrollerBottom.reset({
@@ -112,11 +112,9 @@ export default {
         })
       })
     },
-    switchTab(evt) {
+    switchTab (evt) {
       event.stopPropagation()
       this.tabShow = !this.tabShow
-      console.log('切换成功')
-      console.log(this.tabShow)
     }
   }
 }

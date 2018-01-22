@@ -1,8 +1,8 @@
 <template>
-	<div>
-		<title-header :title="title"></title-header>
-		<good :list="goodList"></good>
-	</div>
+  <div>
+    <title-header :title="title"></title-header>
+    <good :list="goodList"></good>
+  </div>
 
 </template>
 
@@ -12,12 +12,12 @@ import TitleHeader from '@/components/titleHeader.vue'
 
 export default {
   components: {
-	Good,
-  TitleHeader
+    Good,
+    TitleHeader
   },
-  data() {
+  data () {
     return {
-      title:'我的订单',
+      title: '我的订单',
       goodList: [
         {
           shopName: '新华都超市',

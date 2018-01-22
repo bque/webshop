@@ -1,24 +1,24 @@
 <template>
-	<div>
-		<a :class="{'addred':red}">{{mes}}</a>
-	</div>
+  <div>
+    <a :class="{'addred':red}">{{mes}}</a>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       mes: 'niaho',
       red: false
     }
   },
   methods: {
-    change() {
+    change () {
       this.red = true
     }
   },
   watch: {
-    mes() {
+    mes () {
       console.log(121231)
     }
   },
