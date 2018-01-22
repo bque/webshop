@@ -1,6 +1,6 @@
 <template>
-	<div>
-	  <group>
+  <div>
+    <group>
       <x-switch title="set max-height=50%" v-model="show13"></x-switch>
     </group>
     <div v-transfer-dom>
@@ -13,11 +13,21 @@
         </div>
       </popup>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
-	import { TransferDom, Popup, Group, Cell, XButton, XSwitch, Toast, XAddress, ChinaAddressData } from 'vux'
+import {
+  TransferDom,
+  Popup,
+  Group,
+  Cell,
+  XButton,
+  XSwitch,
+  Toast,
+  XAddress,
+  ChinaAddressData
+} from 'vux'
 export default {
   directives: {
     TransferDom
@@ -33,19 +43,14 @@ export default {
   },
   data () {
     return {
-
       show13: false
     }
   },
-  methods: {
-
-  },
-  watch: {
-
-  }
+  methods: {},
+  watch: {}
 }
 </script>
 
 <style scoped="scoped">
-	/*.GoodDetailModel{width: 100%; height: 20REM; background: red;}*/
+/*.GoodDetailModel{width: 100%; height: 20REM; background: red;}*/
 </style>

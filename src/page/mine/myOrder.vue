@@ -1,24 +1,23 @@
 <template>
-	<div>
-		<x-header class="tilte-header">
-			<span style="color: #333;">我的订单</span>
-		</x-header>
-		<good :list="goodList"></good>
-	</div>
+  <div>
+    <title-header :title="title"></title-header>
+    <good :list="goodList"></good>
+  </div>
 
 </template>
 
 <script>
-import { XHeader } from 'vux'
 import Good from '@/components/good.vue'
+import TitleHeader from '@/components/titleHeader.vue'
 
 export default {
   components: {
-	Good,
-	XHeader
+    Good,
+    TitleHeader
   },
-  data() {
+  data () {
     return {
+      title: '我的订单',
       goodList: [
         {
           shopName: '新华都超市',
@@ -49,9 +48,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.tilte-header {
-  background-color: #fff;
-}
-</style>

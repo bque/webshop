@@ -4,7 +4,7 @@
       <div class="top">
         {{value.shopName}}
       </div>
-      
+
       <div class="goodItem clearfix ">
         <div class="left">
           <img :src='value.goodImg' align="absmiddle" />
@@ -28,7 +28,7 @@
 <script>
 export default {
   props: ['list'],
-  data() {
+  data () {
     return {
       goodsList: this.list
     }

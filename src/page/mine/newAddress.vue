@@ -18,7 +18,7 @@ export default {
     newAdds,
     XButton
   },
-  data() {
+  data () {
     return {
       titleContent: '新增收货地址'
     }

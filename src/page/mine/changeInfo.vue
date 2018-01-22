@@ -27,7 +27,7 @@ export default {
     XInput,
     XButton
   },
-  data() {
+  data () {
     return {
       username: '猪，你的鼻子有两个孔',
       time: '1966-01-12'

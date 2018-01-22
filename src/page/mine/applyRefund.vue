@@ -1,24 +1,24 @@
 <template>
-	<div>
-		<goodB :list='list'>
-			<p slot='top'></p>
-		</goodB>
-		<group>
-			<!--<cell title="退款原因" value="请选择" is-link></cell>-->
-			<div class="cell">
-				退款原因
-				<span class="right">请选择</span>
-				<x-icon type="ios-arrow-right" size="30" class="iconR"></x-icon>
-			</div>
-			<div class="cell">
-				退款金额 :
-				<span class="money">￥454</span>
-			</div>
-			<router-link to="/shoppingCart">
-				<x-button type="warn" class="bottom">提交</x-button>
-			</router-link>
-		</group>
-	</div>
+  <div>
+    <goodB :list='list'>
+      <p slot='top'></p>
+    </goodB>
+    <group>
+      <!--<cell title="退款原因" value="请选择" is-link></cell>-->
+      <div class="cell">
+        退款原因
+        <span class="right">请选择</span>
+        <x-icon type="ios-arrow-right" size="30" class="iconR"></x-icon>
+      </div>
+      <div class="cell">
+        退款金额 :
+        <span class="money">￥454</span>
+      </div>
+      <router-link to="/shoppingCart">
+        <x-button type="warn" class="bottom">提交</x-button>
+      </router-link>
+    </group>
+  </div>
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default {
     Cell,
     XButton
   },
-  data() {
+  data () {
     return {
       list: [
         {

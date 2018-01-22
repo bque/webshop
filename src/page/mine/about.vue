@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-import { Card, Cell, Group , XHeader} from 'vux'
+import { Card, Cell, Group, XHeader } from 'vux'
 export default {
   components: {
     Card,
@@ -30,12 +30,12 @@ export default {
   background-color: #fff;
 }
 .about-icon {
-    width: 100px;
-    display: block;
-    margin: auto;
-    padding: 76px;
+  width: 100px;
+  display: block;
+  margin: auto;
+  padding: 76px;
 }
 .m-t-0 {
-    margin-top: 0;
+  margin-top: 0;
 }
 </style>

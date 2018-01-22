@@ -16,9 +16,11 @@
               </router-link>
             </div>
             <div class="right relative" :class="{noBorder:indexs==value.goods.length-1}">
-              
-              <p class="firstP"><router-link :to="{name:'gooddetail' ,query : {good:'1222'}}" style="border: none;">{{item.name}}</router-link></p>
-              
+
+              <p class="firstP">
+                <router-link :to="{name:'gooddetail' ,query : {good:'1222'}}" style="border: none;">{{item.name}}</router-link>
+              </p>
+
               <p>
                 <span class='opacity'>重量:{{item.weight}}</span>
                 <span class="positionRight opacity">修改</span>
@@ -27,7 +29,7 @@
                 <span class="money">￥{{item.price}}</span>
                 <!--<s class="referencePrice">$100</s>-->
                 <span class="positionRight">
-                  <a class="a"  @click="changeNum(index,indexs,-1)">-</a>
+                  <a class="a" @click="changeNum(index,indexs,-1)">-</a>
                   <a class="a">{{item.num}}</a>
                   <a class="a" @click="changeNum(index,indexs,1)">+</a>
                 </span>
@@ -51,7 +53,7 @@
 <script>
 export default {
   components: {},
-  data() {
+  data () {
     return {
       checkAll: false,
       totalMoney: 0,
@@ -109,7 +111,7 @@ export default {
     }
   },
   methods: {
-    checkAllGoods() {
+    checkAllGoods () {
       var mark = this.checkAll
       this.shoppingGoods.forEach((value, index) => {
         value.checkStoreAll = !mark
@@ -119,14 +121,14 @@ export default {
       })
       this.addMoney()
     },
-    checkStoreAll(index) {
+    checkStoreAll (index) {
       var mark = this.shoppingGoods[index].checkStoreAll
       this.shoppingGoods[index].goods.forEach(value => {
         value.check = !mark
       })
       this.checkItem()
     },
-    checkItem(indexOne, indexTwo) {
+    checkItem (indexOne, indexTwo) {
       this.addMoney()
       this.shoppingGoods.forEach((value, index) => {
         value.goods.forEach((item, indexs) => {
@@ -145,7 +147,7 @@ export default {
         })
       })
     },
-    changeNum(indexOne, indexTwo, val) {
+    changeNum (indexOne, indexTwo, val) {
       this.shoppingGoods[indexOne].goods[indexTwo].num += val
       var num = this.shoppingGoods[indexOne].goods[indexTwo].num
       if (num < 1) {
@@ -153,7 +155,7 @@ export default {
       }
       this.addMoney()
     },
-    addMoney() {
+    addMoney () {
       this.$nextTick(() => {
         var totalMoney = 0
         this.shoppingGoods.forEach(value => {
@@ -249,8 +251,7 @@ export default {
 }
 
 .shopGoods .left img {
-	width: 65%;
-  height:5.1rem;
+ 
   margin-left: 5%;
 }
 
@@ -289,11 +290,11 @@ export default {
 
 .firstP {
   padding-right: 1.7rem;
-  overflow:hidden; 
-  text-overflow:ellipsis;
-  display:-webkit-box; 
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .shopGoodsLi {
@@ -333,7 +334,9 @@ export default {
   position: absolute;
   right: 35.5%;
 }
-.section .noBorder{border-bottom: none;}
+.section .noBorder {
+  border-bottom: none;
+}
 /*.referencePrice {
   opacity: 0.4;
 }*/
