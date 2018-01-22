@@ -15,7 +15,7 @@
 		<div>
 			<ul class="footer">
 				<li class="classOne">
-					<span class="iconfont icon-liwu"></span>
+					<span class="iconfont icon-message_light"></span>
 					<h4>客服</h4>
 				</li>
 				<li class="classOne">
