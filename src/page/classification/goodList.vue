@@ -1,34 +1,30 @@
 <template>
- <div>
- 	<goodList>
- 		<div class="title" slot='top'>
-			<x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
-			键盘
-		</div>
- 	</goodList>
- </div>
+  <div>
+    <goodList>
+      <div class="title" slot='top'>
+        <x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
+        键盘
+      </div>
+    </goodList>
+  </div>
 </template>
 
 <script>
-	import OrderResultTop from '../../components/orderResultTop'
-	import GoodList from '../../components/goodList'
-	export default{
-		components:{
-			OrderResultTop,
-			GoodList
-    },
-    mounted: function(){
-      // console.log('商品列表加参数'+ this.$route.query.Id)
-    }
-	}
+import OrderResultTop from '../../components/orderResultTop'
+import GoodList from '../../components/goodList'
+export default {
+  components: {
+    OrderResultTop,
+    GoodList
+  }
+}
 </script>
 
 <style scoped>
-	.title {
+.title {
   line-height: 3rem;
   width: 100%;
   height: 3rem;
-  color: ;
   background: white;
   font-size: 1.2rem;
   margin-bottom: -16px;

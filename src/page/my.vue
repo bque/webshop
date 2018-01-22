@@ -19,10 +19,10 @@
       </router-link>
     </group>
 
-     <card class="m-t-0">
+    <card class="m-t-0">
       <div slot="content" class="card-demo-flex card-demo-content01">
         <div class="icon-block" v-for="(orderIcon,i) in orderIcons" :key="i">
-          <router-link :to="orderIcon.url" >
+          <router-link :to="orderIcon.url">
             <span class="iconfont icon-size" :class="orderIcon.icons"></span>
             <br/>
             <h5>{{orderIcon.title}}</h5>
@@ -33,20 +33,20 @@
 
     <group class="m-1-t">
       <router-link to="/address">
-      <cell title="收货地址" is-link></cell>
+        <cell title="收货地址" is-link></cell>
       </router-link>
       <router-link to="/home">
-      <cell title="收藏中心" is-link></cell>
+        <cell title="收藏中心" is-link></cell>
       </router-link>
       <router-link to="/home">
-      <cell title="客服中心" is-link></cell>
+        <cell title="客服中心" is-link></cell>
       </router-link>
     </group>
     <goodList></goodList>
     <footer>
       <foot></foot>
     </footer>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -63,18 +63,33 @@ export default {
     GoodList,
     Foot
   },
-  data() {
+  data () {
     return {
       orderIcons: [
-        { url:'/waitPayment', icons: 'icon-yinhangqia-xianxing', title: '待付款' },
-        { url:'/waitDelivery',icons: 'icon-baoguofahuo-xianxing', title: '待发货' },
-        { url:'/waitGood',icons: 'icon-yunshuzhongwuliu-xianxing', title: '待收货' },
-        { url:'/waitEvaluation',icons: 'icon-liaotianduihua-xianxing', title: '待评价' },
-        { url:'/refund',icons: 'icon-tuikuan', title: '退款/售后' }
+        {
+          url: '/waitPayment',
+          icons: 'icon-yinhangqia-xianxing',
+          title: '待付款'
+        },
+        {
+          url: '/waitDelivery',
+          icons: 'icon-baoguofahuo-xianxing',
+          title: '待发货'
+        },
+        {
+          url: '/waitGood',
+          icons: 'icon-yunshuzhongwuliu-xianxing',
+          title: '待收货'
+        },
+        {
+          url: '/waitEvaluation',
+          icons: 'icon-liaotianduihua-xianxing',
+          title: '待评价'
+        },
+        { url: '/refund', icons: 'icon-tuikuan', title: '退款/售后' }
       ]
     }
-  },
-  methods: {}
+  }
 }
 </script>
 

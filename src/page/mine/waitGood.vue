@@ -1,10 +1,10 @@
 <template>
-	<div>
-		<x-header class="tilte-header">
-			<span style="color: #333;">待收货</span>
-		</x-header>
-		<good :list="goodList"></good>
-	</div>
+  <div>
+    <x-header class="tilte-header">
+      <span style="color: #333;">待收货</span>
+    </x-header>
+    <good :list="goodList"></good>
+  </div>
 
 </template>
 
@@ -13,10 +13,10 @@ import Good from '@/components/good.vue'
 import { XHeader } from 'vux'
 export default {
   components: {
-	Good,
-	XHeader
+    Good,
+    XHeader
   },
-  data() {
+  data () {
     return {
       goodList: [
         {

@@ -1,11 +1,11 @@
 <template>
-	<div>
-		<x-header class="tilte-header">
-			<span style="color: #333;">待发货</span>
-		</x-header>
-		<!--待发货-->
-		<good :list="goodList"></good>
-	</div>
+  <div>
+    <x-header class="tilte-header">
+      <span style="color: #333;">待发货</span>
+    </x-header>
+    <!--待发货-->
+    <good :list="goodList"></good>
+  </div>
 
 </template>
 
@@ -18,7 +18,7 @@ export default {
     Good,
     XHeader
   },
-  data() {
+  data () {
     return {
       goodList: [
         {

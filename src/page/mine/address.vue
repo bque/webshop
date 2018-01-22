@@ -1,13 +1,13 @@
 <template>
-    <div>
-        <x-header class="tilte-header">
-            <span style="color: #333;">收货地址</span>
-        </x-header>
-        <adds></adds>
-        <router-link to="/newaddress">
-            <x-button type="warn" action-type="reset" class="btn-place">新增收货地址</x-button>
-        </router-link>
-    </div>
+  <div>
+    <x-header class="tilte-header">
+      <span style="color: #333;">收货地址</span>
+    </x-header>
+    <adds></adds>
+    <router-link to="/newaddress">
+      <x-button type="warn" action-type="reset" class="btn-place">新增收货地址</x-button>
+    </router-link>
+  </div>
 
 </template>
 <script>

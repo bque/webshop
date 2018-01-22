@@ -1,19 +1,19 @@
 <template>
-	<div class="chooseStores">
-		<div class="header">
-			<router-link to="/">
-				<span class="iconfont icon-fanhui"></span>
-			</router-link>选择门店</div>
-		<group label-width="4.5em" label-margin-right="2em" label-align="right" class="marginTopNegative">
-			<cell title="福州"></cell>
-			<cell title="厦门"></cell>
-			<cell title="福州"></cell>
-			<cell title="厦门"></cell>
-			<cell title="福州"></cell>
-			<cell title="厦门"></cell>
-		</group>
+  <div class="chooseStores">
+    <div class="header">
+      <router-link to="/">
+        <span class="iconfont icon-fanhui"></span>
+      </router-link>选择门店</div>
+    <group label-width="4.5em" label-margin-right="2em" label-align="right" class="marginTopNegative">
+      <cell title="福州"></cell>
+      <cell title="厦门"></cell>
+      <cell title="福州"></cell>
+      <cell title="厦门"></cell>
+      <cell title="福州"></cell>
+      <cell title="厦门"></cell>
+    </group>
 
-	</div>
+  </div>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
     Group,
     Cell
   },
-  data() {
+  data () {
     return {}
   }
 }

@@ -1,35 +1,35 @@
 <template>
-	<div class="letters">
-		<!--	<img src="../img/index-link-ft.jpg"  align="absmiddle"><span>购物需知买家必看</span>-->
-		<div class="content">
-			<img src="../img/index-link-ft.jpg" align="absmiddle">
-			<!--<span v-if="mesShow" key="one">购物需知买家必看</span>
+  <div class="letters">
+    <!--	<img src="../img/index-link-ft.jpg"  align="absmiddle"><span>购物需知买家必看</span>-->
+    <div class="content">
+      <img src="../img/index-link-ft.jpg" align="absmiddle">
+      <!--<span v-if="mesShow" key="one">购物需知买家必看</span>
 				<span v-else key="two">123123</span>-->
-			<span>
-				{{ mesShow ? '购物需知买家必看' : '123123' }}
-			</span>
-		</div>
+      <span>
+        {{ mesShow ? '购物需知买家必看' : '123123' }}
+      </span>
+    </div>
 
-	</div>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       mesShow: true,
       bounce: 'bounce'
     }
   },
   methods: {
-    change() {
+    change () {
       var _this = this
-      setInterval(function() {
+      setInterval(function () {
         _this.mesShow = !_this.mesShow
       }, 2000)
     }
   },
-  mounted() {
+  mounted () {
     this.change()
   },
   watch: {}

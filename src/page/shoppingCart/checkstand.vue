@@ -55,7 +55,6 @@ export default {
 .title {
   width: 100%;
   height: 3rem;
-  color: ;
   background: white;
   font-size: 1.2rem;
   margin-bottom: -16px;

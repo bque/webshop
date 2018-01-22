@@ -31,7 +31,6 @@ import ApplyRefund from '@/page/mine/applyRefund.vue'
 import MyOrder from '@/page/mine/myOrder.vue'
 
 import Cart from '@/components/cart.vue'
-import Good from '@/components/good.vue'
 
 Vue.use(Router)
 
