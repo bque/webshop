@@ -224,14 +224,15 @@ export default {
 }
 
 .shopGoods .left {
-  width: 35%;
+  width: 40%;
   height: 100%;
   float: left;
 }
 
 .shopGoods .right {
+	
   padding-left: 2%;
-  width: 63%;
+  width: 58%;
   height: 100%;
   font-size: 0.8rem;
   float: left;
@@ -239,15 +240,16 @@ export default {
 }
 
 .shopGoods .right .a {
-  padding: 1px 8px;
+  padding: 2px 10px;
   border: 1px solid gainsboro;
 }
 
 .shopGoods .left input {
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .shopGoods .left img {
+	width: 65%;
   height:5.1rem;
   margin-left: 5%;
 }
@@ -264,7 +266,7 @@ export default {
 
 .positionRight {
   position: absolute;
-  right: 2%;
+  right: 5%;
 }
 
 .opacity {
