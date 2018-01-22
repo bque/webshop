@@ -1,6 +1,6 @@
 <template>
 	<div>
-	<swiper heights='28' :swiperList='swiperList' :direction='direction'></swiper>
+	<swiper heights='24' :swiperList='swiperList' :direction='direction'></swiper>
 	<section >
 		<div class="content">
 			<p class="goodName"><a class="shopName">新华都</a>小米 红米5 Plus 全面屏手机 全网通版 4GB+64GB 黑色 移动联通电信4G手机 双卡双待</p>
@@ -8,7 +8,7 @@
 			<p class="lastP"><a class="money">￥5799.00</a>  <s>￥5799</s> <span class="positionRight">重量 0.48kg</span></p>
 		</div>
 		 <group class='group'>
-	      <cell :title="title"  is-link @click.native="show13 = true"></cell>
+	      <cell :title="title"  is-link @click.native="show13 = true" class="choose"></cell>
 	    </group>
 	</section>
 	<footer>
@@ -31,13 +31,14 @@
 	<div>
 
     <div v-transfer-dom>
-      <popup v-model="show13" position="bottom" height="60%" class="popup">
+      <popup v-model="show13" position="bottom" height="75%"   class="popup">
       	<div class='top'>
       		<div class="left"><img src="//img14.360buyimg.com/n1/s450x450_jfs/t16492/203/126997766/293977/d94fc6e1/5a28b64cN5583735a.jpg"/></div>
       		<div class="right">
       			<p class="moneys">￥88</p>
       			<p>库存 5478件</p>
-      			<p>已选择 : 39 蓝色</p>
+      			<p >请选择 颜色 分类</p>
+      			<!--<p>已选择 : <span>38</span> 蓝色</p>-->
       		</div>
       	</div>
         <div class="classification">
@@ -82,7 +83,7 @@
         </div>
         <div class="btnBottom" >
 					<router-link to="/fillorder">
-           <x-button class='btn' style="background: red;"  @click.native='show13 = false'>确定</x-button>
+           <x-button class='btn' style="background: orangered;"  @click.native='show13 = false'>确定</x-button>
 					</router-link>
         </div>
       </popup>
@@ -136,7 +137,7 @@
 		return {
 			swiperList: baseList,
 			 direction:'center',
-			 title:"请选择 尺寸 颜色分类",
+			 title:"请选择 尺寸 颜色",
 			 show13: false,
 			 step1: 1
 		}
@@ -149,6 +150,7 @@
 </script>
 <style scoped>
 	section{margin-bottom: 3rem;}
+	.popup{ overflow: inherit;}
 	.content{padding: 0.5rem ;}
 	.content .goodName{font-size: 1rem; word-break: break-all;}
 	.content .goodName a{background: red; color: white;margin-right: 1rem; padding:0 0.5rem ;}
@@ -169,24 +171,26 @@
 
 .btnBottom{width: 100%; height: 2.65rem; position: fixed; bottom: 0;z-index: 9999;}
 .btn{width: 100%;margin: 0 !important;color: white;}
-.top{width: 100%; height: 6rem; position: fixed; top: 40%; z-index: 100; height: 6rem;background: white; border-bottom: 2px solid gainsboro;}
+.top{width: 100%; height: 6rem; position: absolute; top: 0%; z-index: 100; height: 6rem;background: white; border-bottom: 2px solid gainsboro;}
 .top .left,.top .right{float: left; }
 .top .right{padding-left: 5%;width: 65%;}
 .top .left{width: 30%; height: 100%;text-align: right;margin-bottom: 10px;}
 .top .left img{width: 90%;margin-top: -20%; border: 2px solid white; border-radius: 10px;}
 .money{color: red;}
-.classification{width: 100%; margin-top: 6rem;min-height: 30rem;background: white;}
+.classification{width: 100%; margin-top: 6rem;height:70%;background: white;}
 
-.classification>ul{width: 90%; margin: 0 auto;}
+.classification>ul{width: 90%; margin: 0 auto;height: 100%; overflow-y:scroll ;}
 .classification>ul>li{border-bottom: 1px solid gainsboro; padding: 10px 0 20px 0;}
 .classification ul{list-style: none;}
 .contain li{display: inline-block; padding: 2px 8px;background: #F0F0F0; border-radius: 5px;margin-top: 10px;margin-right: 5px;}
+.contain li:hover{background: orangered; color: white;}
 .relative{position: relative;}
 .changeNum{position: absolute; right:0;color: black;}
 .vux-number-selector svg{color: red !important;}
 ::-webkit-scrollbar {
   display: none;
 }
+.choose{font-size: 1rem;}
 </style>
 
 
