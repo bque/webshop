@@ -15,7 +15,7 @@
                 <img :src='item.img' align="absmiddle" />
               </router-link>
             </div>
-            <div class="right relative">
+            <div class="right relative" :class="{noBorder:indexs==value.goods.length-1}">
               
               <p class="firstP"><router-link :to="{name:'gooddetail' ,query : {good:'1222'}}" style="border: none;">{{item.name}}</router-link></p>
               
@@ -25,11 +25,11 @@
               </p>
               <p class="lastP">
                 <span class="money">￥{{item.price}}</span>
-                <s class="referencePrice">$100</s>
+                <!--<s class="referencePrice">$100</s>-->
                 <span class="positionRight">
-                  <a @click="changeNum(index,indexs,-1)">-</a>
-                  <a>{{item.num}}</a>
-                  <a @click="changeNum(index,indexs,1)">+</a>
+                  <a class="a"  @click="changeNum(index,indexs,-1)">-</a>
+                  <a class="a">{{item.num}}</a>
+                  <a class="a" @click="changeNum(index,indexs,1)">+</a>
                 </span>
               </p>
             </div>
@@ -235,19 +235,20 @@ export default {
   height: 100%;
   font-size: 0.8rem;
   float: left;
+  border-bottom: 1px solid lightgray;
 }
 
-.shopGoods .right a {
+.shopGoods .right .a {
   padding: 1px 8px;
   border: 1px solid gainsboro;
 }
 
 .shopGoods .left input {
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .shopGoods .left img {
-  height: 5.1rem;
+  height:5.1rem;
   margin-left: 5%;
 }
 
@@ -286,6 +287,11 @@ export default {
 
 .firstP {
   padding-right: 1.7rem;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
 }
 
 .shopGoodsLi {
@@ -325,8 +331,8 @@ export default {
   position: absolute;
   right: 35.5%;
 }
-
-.referencePrice {
+.section .noBorder{border-bottom: none;}
+/*.referencePrice {
   opacity: 0.4;
-}
+}*/
 </style>
