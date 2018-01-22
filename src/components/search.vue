@@ -75,9 +75,11 @@ export default {
 <style scoped>
 .address,
 .rights {
-  margin: 0 10px;
+
   color: gray;
 }
+.address{  margin-right: 10px;}
+.rights{margin-left: 10px;}
 .address{width: 2.2rem;}
 .search div {
   /*color: white;*/

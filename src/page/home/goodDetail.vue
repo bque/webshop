@@ -175,7 +175,7 @@
 .top .left,.top .right{float: left; }
 .top .right{padding-left: 5%;width: 65%;}
 .top .left{width: 30%; height: 100%;text-align: right;margin-bottom: 10px;}
-.top .left img{width: 90%;margin-top: -20%; border: 2px solid white; border-radius: 10px;}
+.top .left img{width: 90%; border: 2px solid white; border-radius: 10px;}
 .money{color: red;}
 .classification{width: 100%; margin-top: 6rem;height:70%;background: white;}
 
