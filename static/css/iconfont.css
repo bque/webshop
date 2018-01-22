@@ -1,9 +1,9 @@
 
 @font-face {font-family: "iconfont";
-  src: url('/webshop/font/iconfont.eot?t=1516240447845'); /* IE9*/
-  src: url('/webshop/font/iconfont.eot?t=1516240447845#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('/webshop/font/iconfont.ttf?t=1516240447845') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('/webshop/font/iconfont.svg?t=1516240447845#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('/static/font/iconfont.eot?t=1516240447845'); /* IE9*/
+  src: url('/static/font/iconfont.eot?t=1516240447845#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/static/font/iconfont.ttf?t=1516240447845') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/static/font/iconfont.svg?t=1516240447845#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
