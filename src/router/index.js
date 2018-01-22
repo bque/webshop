@@ -85,7 +85,7 @@ export default new Router({
     path: '/gooddetail',
     name: 'gooddetail',
     meta: {
-      title: '选择门店'
+      title: '商品详情'
     },
     component: GoodDetails
   },
