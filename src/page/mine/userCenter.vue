@@ -1,11 +1,9 @@
 <template>
   <div>
-    <x-header class="tilte-header">
-      <span style="color: #333;">个人中心</span>
-    </x-header>
-    <Group class="m-1-t">
+    <title-header :title="title"></title-header>
+    <Group class="m-1-t b-t-block">
       <router-link to="/changeInfo">
-        <cell title="改资料" is-link></cell>
+        <cell title="修改资料" is-link></cell>
       </router-link>
       <router-link to="/password">
         <cell title="修改密码" is-link></cell>
@@ -17,23 +15,29 @@
   </div>
 </template>
 <script>
-import { Group, Cell, XHeader } from 'vux'
+import { Group, Cell } from 'vux'
+import TitleHeader from '@/components/titleHeader.vue'
 export default {
   components: {
     Group,
     Cell,
-    XHeader
+    TitleHeader
+  },
+  data () {
+    return {
+      title: '个人中心'
+    }
   }
 }
 </script>
 <style scoped>
-.tilte-header {
-  background-color: #fff;
-}
 .m-1-t {
   margin-top: -1.3em;
 }
-a{
-  color:#333;
+a {
+  color: #333;
+}
+.b-t-block a div{
+  border-bottom: 1px solid #E5E5E5;
 }
 </style>

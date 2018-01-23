@@ -29,80 +29,79 @@
 </template>
 
 <script>
-	
-	export default {
-		props:{
-			list:{type:Array},
-			mark:{
-				type:Boolean,
-				default:true
-			}
-		},
-		data() {
-			return {
-				goodList:this.list,
-				marks:this.mark
-			}
-		}
-	}
+export default {
+  props: {
+    list: { type: Array },
+    mark: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data () {
+    return {
+      goodList: this.list,
+      marks: this.mark
+    }
+  }
+}
 </script>
 
 <style scoped>
-	.top {
-		height: 2rem;
-		line-height: 2rem;
-		background: rgb(241, 240, 243);
-		padding-left: 2%;
-	}
-	
-	.good {
-		width: 100%;
-		height: 4rem;
-		padding: 1rem 0;
-		border-top: 2px solid #f0f0f0;
-		border-bottom: 10px solid #f0f0f0;
-	}
-	
-	.left {
-		width: 25%;
-		float: left;
-	}
-	
-	.left img {
-		width: 75%;
-		margin-left: 10%;
-	}
-	
-	.right {
-		width: 70%;
-		float: left;
-		padding-left: 5%;
-	}
-	
-	.right .firstP {
-		font-size: 0.9rem;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		padding-right: 5%;
-	}
-	
-	.showColor {
-		font-size: 0.8rem;
-	}
-	
-	.money {
-		color: red;
-		font-size: 1.1rem;
-	}
-	
-	.opacity {
-		opacity: 0.4;
-	}
-	
-	.positionRight {
-		position: absolute;
-		right: 5%;
-		font-size: 0.8rem;
-	}
+.top {
+  height: 2rem;
+  line-height: 2rem;
+  background: rgb(241, 240, 243);
+  padding-left: 2%;
+}
+
+.good {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem 0;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 10px solid #f0f0f0;
+}
+
+.left {
+  width: 25%;
+  float: left;
+}
+
+.left img {
+  width: 75%;
+  margin-left: 10%;
+}
+
+.right {
+  width: 70%;
+  float: left;
+  padding-left: 5%;
+}
+
+.right .firstP {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 5%;
+}
+
+.showColor {
+  font-size: 0.8rem;
+}
+
+.money {
+  color: red;
+  font-size: 1.1rem;
+}
+
+.opacity {
+  opacity: 0.4;
+}
+
+.positionRight {
+  position: absolute;
+  right: 5%;
+  font-size: 0.8rem;
+}
 </style>

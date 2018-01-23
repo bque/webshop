@@ -1,11 +1,11 @@
 <template>
   <div class="goodList">
-    
+
     <sticky scroll-box="" :check-sticky-support="false" class="sticky" v-if="true">
-			<slot name='top'>
-      <div class="top">{{title}}</div>
-    </slot>
-		</sticky>
+      <slot name='top'>
+        <div class="top">{{title}}</div>
+      </slot>
+    </sticky>
     <scroller lock-x height="59.2rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
       <div class="box1">
         <grid :cols='2' class='padding0'>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { Grid, GridItem, Scroller, LoadMore,Sticky } from 'vux'
+import { Grid, GridItem, Scroller, LoadMore, Sticky } from 'vux'
 export default {
   components: {
     Grid,
@@ -39,20 +39,20 @@ export default {
       default: '为 / 你 / 推 / 荐'
     }
   },
-  data() {
+  data () {
     return {
       bottomCount: 20,
       titles: this.title
     }
   },
   methods: {
-    onScrollBottom() {
+    onScrollBottom () {
       if (this.onFetching) {
         // do nothing
       } else {
         this.onFetching = true
         setTimeout(() => {
-          //						this.bottomCount += 10
+          // this.bottomCount += 10
           this.$nextTick(() => {
             this.$refs.scrollerBottom.reset()
           })
@@ -72,7 +72,6 @@ export default {
 .item {
   width: 100%;
   height: 100%;
-  height: 12rem;
   background: white;
 }
 

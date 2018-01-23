@@ -1,19 +1,19 @@
 <template>
-	<div class="classification">
-		<header>
-			<search>
-				<span slot='left' class="hidden"></span>
-				<span slot='right' class="hidden"></span>
-			</search>
-		</header>
-		<section>
-			<classificationOfLinkage></classificationOfLinkage>
-		</section>
-		<footer>
-			<foot :activeNums='2'></foot>
-		</footer>
-		
-	</div>
+  <div class="classification">
+    <header>
+      <search>
+        <span slot='left' class="hidden"></span>
+        <span slot='right' class="hidden"></span>
+      </search>
+    </header>
+    <section>
+      <classificationOfLinkage></classificationOfLinkage>
+    </section>
+    <footer>
+      <foot :activeNums='2'></foot>
+    </footer>
+
+  </div>
 </template>
 
 <script>
@@ -26,9 +26,6 @@ export default {
     Search,
     ClassificationOfLinkage,
     Foot
-  },
-  data() {
-    return {}
   }
 }
 </script>

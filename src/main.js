@@ -5,7 +5,7 @@ import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
 import { AlertPlugin, ToastPlugin } from 'vux'
-import "babel-polyfill"
+import 'babel-polyfill'
 
 Vue.use(AlertPlugin)
 Vue.use(ToastPlugin)

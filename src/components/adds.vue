@@ -23,7 +23,7 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       locations: [
         {
@@ -76,8 +76,9 @@ export default {
 }
 .address-bolck {
   background-color: #fff;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 5px;
+  border-bottom: 1px solid #E5E5E5;
+}
+a {
+  color: #333;
 }
 </style>

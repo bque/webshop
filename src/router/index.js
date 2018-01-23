@@ -30,13 +30,14 @@ import WaitEvaluation from '@/page/mine/waitEvaluation.vue'
 import ApplyRefund from '@/page/mine/applyRefund.vue'
 import MyOrder from '@/page/mine/myOrder.vue'
 
+import LoginPage from '@/page/login/loginPage.vue' // 登录模块
+
 import Cart from '@/components/cart.vue'
-import Good from '@/components/good.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
+//   mode: 'history',
   routes: [{
     path: '/',
     redirect: 'home'
@@ -85,7 +86,7 @@ export default new Router({
     path: '/gooddetail',
     name: 'gooddetail',
     meta: {
-      title: '选择门店'
+      title: '商品详情'
     },
     component: GoodDetails
   },
@@ -141,7 +142,7 @@ export default new Router({
     path: '/changeinfo',
     name: 'changeinfo',
     meta: {
-      title: '改资料'
+      title: '修改资料'
     },
     component: ChangeInfo
   },
@@ -237,6 +238,11 @@ export default new Router({
     path: '/cart',
     name: 'cart',
     component: Cart
+  },
+  {
+    path: '/loginpage',
+    name: 'loginpage',
+    component: LoginPage
   }
   ]
 

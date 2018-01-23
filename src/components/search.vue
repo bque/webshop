@@ -1,72 +1,64 @@
 <template>
-	<div class="header">
-		<search class="search" placeholder="搜索" auto-scroll-to-top top="0" position="fixed" @on-focus="onFocus" @on-cancel="onCancel" @on-submit="onSubmit" ref="search">
-			<slot name='left' >
-				<div  class="address" slot="left">{{place}}</div>
-			</slot>
-			<slot name='right'>
-				<!--<div  class="right"  slot="right">-->
-				<span class="iconfont icon-saoma rights" slot="right"></span>
-				<!--</div>-->
-			</slot>
-		</search>
-	</div>
+  <div class="header">
+    <search class="search" placeholder="搜索" auto-scroll-to-top top="0" position="fixed" @on-focus="onFocus" @on-cancel="onCancel" @on-submit="onSubmit" ref="search">
+      <slot name='left' v-if="show">
+        <div class="address" slot="left">{{place}}</div>
+      </slot>
+      <slot name='right' v-if="show">
+        <span class="iconfont icon-saoma rights" slot="right"></span>
+      </slot>
+    </search>
+  </div>
 </template>
 
 <script>
-import { Search} from 'vux'
+import { Search } from 'vux'
 export default {
   components: {
     Search
-    
   },
-  data() {
+  data () {
     return {
-      place: '福州'
+      place: '福州',
+      show: true
     }
   },
-  mounted:function(){
-    console.log('13133')
-  },
   methods: {
-    onFocus() {
-      this.place = ''
+    onFocus () {
+      this.show = false
       document.getElementsByClassName(
         'weui-search-bar__cancel-btn'
       )[0].style.color =
         'gray'
-
-      console.log(this.$refs.search)
     },
-    onCancel() {
-      this.place = '福州'
-      console.log('on cancel')
+    onCancel () {
+      this.show = true
     },
-    onSubmit() {
+    onSubmit () {
       this.$refs.search.setBlur()
       this.$vux.toast.show({
-        //					type: 'text',
-        //					position: 'fixed',
-        //					text: 'on submit'
+        // type: 'text',
+        // position: 'fixed',
+        // text: 'on submit'
       })
     },
-    changeStyle() {
-      var weui_search_bar = document.getElementsByClassName(
+    changeStyle () {
+      var weuiSearchBar = document.getElementsByClassName(
         'weui-search-bar'
       )[0]
-      var weui_search_bar_form = document.getElementsByClassName(
+      var weuiSearchBarForm = document.getElementsByClassName(
         'weui-search-bar__form'
       )[0]
-      var weui_search_bar_label = document.getElementsByClassName(
+      var weuiSearchBarLabel = document.getElementsByClassName(
         'weui-search-bar__label'
       )[0]
-      weui_search_bar.style.backgroundColor = '#FFF'
-      weui_search_bar_form.style.height = '93%'
-      weui_search_bar_form.style.borderRadius = '5rem'
-      weui_search_bar_label.style.background = '#f0f0f0'
+      weuiSearchBar.style.backgroundColor = '#FFF'
+      weuiSearchBarForm.style.height = '93%'
+      weuiSearchBarForm.style.borderRadius = '5rem'
+      weuiSearchBarLabel.style.background = '#f0f0f0'
     }
   },
-  mounted() {
+  mounted () {
     this.changeStyle()
   }
 }
@@ -75,12 +67,16 @@ export default {
 <style scoped>
 .address,
 .rights {
-  margin: 0 10px;
   color: gray;
 }
-
-.search div {
-  /*color: white;*/
+.address {
+  margin-right: 10px;
+}
+.rights {
+  margin-left: 10px;
+}
+.address {
+  width: 2.2rem;
 }
 
 .iconfont {
