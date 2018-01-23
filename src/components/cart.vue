@@ -24,7 +24,7 @@
 							</p>
 							<p>
 								<span class='opacity'>重量:{{item.weight}}</span>
-								<span class="positionRight opacity editor" @click="">编辑</span>
+								<span class="positionRight opacity editor" @click="showChoose()">编辑</span>
 							</p>
 							<p class="lastP">
 								<span class="money">￥{{item.price}}</span>
@@ -46,14 +46,18 @@
 				<span class="money smallFont">￥{{totalMoney}}</span>
 			</a>
 			<router-link :to="{name:'fillorder',query:{Id:'122'}}" class="settlement">去结算(1)</router-link>
+		</div>		
+		<div id="popup">
+			<popup ref="showChoose" :marginB='marginBottom'></popup>
 		</div>
 	</div>
 
 </template>
 
 <script>
+import Popup from '@/components/popup.vue'
 export default {
-  components: {},
+  components: {Popup},
   data () {
     return {
       checkAll: false,
@@ -109,7 +113,8 @@ export default {
         }
       ],
       selectedGoogs: [],
-      show: false
+      show: false,
+      marginBottom:true
     }
   },
   methods: {
@@ -180,7 +185,10 @@ export default {
           }
         }
       })
-    }
+    },
+    showChoose (){
+		this.$refs.showChoose.shows=!this.$refs.showChoose.shows;
+  	}
   },
   watch: {}
 }
@@ -379,7 +387,5 @@ input[type='checkbox'] {
 .section .noBorder {
   border-bottom: none;
 }
-/*.referencePrice {
-  opacity: 0.4;
-}*/
+#popup{margin-bottom: 3rem;}
 </style>
