@@ -1,8 +1,6 @@
 <template>
   <div>
-    <x-header class="tilte-header">
-      <span style="color: #333;">收货地址</span>
-    </x-header>
+    <title-header :title="title"></title-header>
     <adds></adds>
     <router-link to="/newaddress">
       <x-button type="warn" action-type="reset" class="btn-place">新增收货地址</x-button>
@@ -11,21 +9,24 @@
 
 </template>
 <script>
-import { XHeader, XButton } from 'vux'
+import { XButton } from 'vux'
+import TitleHeader from '@/components/titleHeader.vue'
 import Adds from '../../components/adds.vue'
 export default {
   components: {
-    XHeader,
     Adds,
-    XButton
+    XButton,
+    TitleHeader
+  },
+  data () {
+    return {
+      title: '收货地址'
+    }
   }
 }
 </script>
 
 <style scoped>
-.tilte-header {
-  background-color: #fff;
-}
 .btn-place {
   position: fixed;
   bottom: 0;

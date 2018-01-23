@@ -1,9 +1,6 @@
 <template>
   <div class="fillOrder">
-    <div class="title">
-      <x-icon type="ios-arrow-back" class="icon" size="30"></x-icon>
-      订单详情
-    </div>
+    <title-header :title="title"></title-header>
     <group>
       <div class="vux-cell-box  address">
         <p>
@@ -57,12 +54,18 @@
 
 <script>
 import { Group, Cell, CellBox } from 'vux'
-
+import TitleHeader from '@/components/titleHeader.vue'
 export default {
   components: {
     Group,
     Cell,
-    CellBox
+    CellBox,
+    TitleHeader
+  },
+  data () {
+    return {
+      title: '订单详情'
+    }
   }
 }
 </script>

@@ -1,10 +1,7 @@
 <template>
   <div>
+    <title-header :title="title"></title-header>
     <goodList>
-      <div class="title" slot='top'>
-        <x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
-        键盘
-      </div>
     </goodList>
   </div>
 </template>
@@ -12,10 +9,17 @@
 <script>
 import OrderResultTop from '../../components/orderResultTop'
 import GoodList from '../../components/goodList'
+import TitleHeader from '@/components/titleHeader.vue'
 export default {
   components: {
     OrderResultTop,
-    GoodList
+    GoodList,
+    TitleHeader
+  },
+  data () {
+    return {
+      title: '键盘'
+    }
   }
 }
 </script>

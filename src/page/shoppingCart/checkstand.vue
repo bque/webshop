@@ -1,10 +1,6 @@
 <template>
   <div class="checkstand">
-    <div class="title topLine">
-      <x-icon type="ios-arrow-left" size="30" class="icon"></x-icon>
-      京东收银台
-      <span class="positionRight"> 订单中心</span>
-    </div>
+    <title-header :title="title"></title-header>
     <group>
       <div class="cell topLine">
         <span class="">订单金额</span>
@@ -36,12 +32,18 @@
 
 <script>
 import { Group, Cell, CellBox } from 'vux'
-
+import TitleHeader from '@/components/titleHeader.vue'
 export default {
   components: {
     Group,
     Cell,
-    CellBox
+    CellBox,
+    TitleHeader
+  },
+  data () {
+    return {
+      title: '支付方式'
+    }
   }
 }
 </script>
