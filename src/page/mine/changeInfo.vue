@@ -30,7 +30,7 @@ export default {
     return {
       username: '猪，你的鼻子有两个孔',
       time: '1966-01-12',
-      title: '改资料'
+      title: '修改资料'
     }
   }
 }

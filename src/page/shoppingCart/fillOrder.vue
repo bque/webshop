@@ -1,16 +1,18 @@
 <template>
   <div class="fillOrder">
     <title-header :title="title"></title-header>
-    <group>
+    <group class="m-1-t">
       <div class="vux-cell-box weui-cell_access vux-tap-active address">
+        <router-link to="/address">
         <p>
           <span class="name">陈胜</span>
           <span class="tel">181****4621</span>
           <a class="default">默认</a>
         </p>
         <p class="addressP">@ 广东 深圳 宝安区 详细地址......</p>
+        </router-link>
       </div>
-      <div class="good clearfix ">
+      <div class="good clearfix">
         <div class="left">
           <img src='https://img.alicdn.com/imgextra/i1/59857264/TB2ItmtdaigSKJjSsppXXabnpXa_!!0-saturn_solar.jpg_220x220.jpg' align="absmiddle" />
         </div>
@@ -26,7 +28,6 @@
         </div>
 
       </div>
-      <cell title="支付方式" value="微信支付" is-link class='cell'></cell>
       <cell title="配送方式" value="免邮" is-link class='cell'></cell>
       <cell title="优惠券" value="无可用" is-link class="borderTB cell"></cell>
 
@@ -113,7 +114,7 @@ export default {
   height: 4rem;
   padding: 1rem 0;
   border-top: 2px solid #f0f0f0;
-  border-bottom: 10px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 }
 .left {
   width: 25%;
@@ -152,8 +153,7 @@ export default {
   font-size: 0.8rem;
 }
 .borderTB {
-  border-top: 10px solid #f0f0f0;
-  border-bottom: 10px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 }
 .result {
   padding: 15px 0;
@@ -202,5 +202,11 @@ export default {
 }
 .cell {
   font-size: 15px;
+}
+.m-1-t {
+  margin-top: -1.3em;
+}
+a {
+  color: #333;
 }
 </style>

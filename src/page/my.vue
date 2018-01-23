@@ -31,7 +31,7 @@
       </div>
     </card>
 
-    <group class="m-1-t">
+    <group class="m-1-t b-t-block">
       <router-link to="/address">
         <cell title="收货地址" is-link></cell>
       </router-link>
@@ -149,5 +149,8 @@ a {
   flex: 1;
   text-align: center;
   font-size: 12px;
+}
+.b-t-block a div{
+  border-bottom: 1px solid #E5E5E5;
 }
 </style>

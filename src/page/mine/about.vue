@@ -4,9 +4,9 @@
         <card class="m-t-0">
             <img slot="header" src="../../../static/img/favicon.png" class="about-icon">
         </card>
-        <group class="m-1-t">
+        <!-- <group class="m-1-t">
             <cell title="版本更新" is-link></cell>
-        </group>
+        </group> -->
     </div>
 </template>
 <script>

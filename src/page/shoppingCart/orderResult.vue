@@ -4,7 +4,7 @@
 			<orderResultTop></orderResultTop>
 		</header>
 		<section>
-			<goodList title='------- 继续剁手 -------'></goodList>
+			<goodList></goodList>
 		</section>
 	</div>
 </template>

@@ -38,4 +38,7 @@ export default {
 .m-1-t {
   margin-top: -1.3em;
 }
+.btn-place {
+  width: 93%
+}
 </style>

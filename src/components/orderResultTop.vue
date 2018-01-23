@@ -23,7 +23,7 @@
     <router-link :to="{name:'orderDetail',query:{id:'413'}}">
       <div class="bottom">
         <a class="btn">查看订单</a>
-        <p>注意: 京东平台及销售商不会以订单异常，系统升级为由要求您点击任何网址链接进行退款操作</p>
+        <p>注意: 该平台及销售商不会以订单异常，系统升级为由要求您点击任何网址链接进行退款操作</p>
       </div>
     </router-link>
   </div>

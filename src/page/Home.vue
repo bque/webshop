@@ -8,10 +8,10 @@
     <section>
       <swiper heights='10' :swiperList='swiperList' :direction='direction'></swiper>
       <!--轮播图-->
-      <!--<advertisingTop></advertisingTop>-->
+      <!-- <advertisingTop></advertisingTop> -->
       <!--优惠券等-->
       <letters></letters>
-      <!--新华都快报-->
+      <!-- 新华都快报 -->
       <fourDdvertising :imgSrc='src'></fourDdvertising>
       <RectangularAdvertising :imgSrc='src'> </RectangularAdvertising>
       <!--长方形广告区-->

@@ -54,7 +54,7 @@
     <scroller lock-x height="45rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
       <div class="box1">
         <grid :cols='2' class='padding0'>
-          <grid-item link="/conment/1" v-for="i in bottomCount" :key="i" style="" class="item">
+          <grid-item :link="{name:'gooddetail',query:{Id:'12'}}" v-for="i in bottomCount" :key="i" style="" class="item">
             <!--		<span class="grid-center">{{i}}</span>-->
             <img src="http://app.nhd-mart.com/xhdshop/upload/image/201612/77332af9-1222-48ba-9f16-2a11e84653ff-medium.jpg" />
             <div class="content">

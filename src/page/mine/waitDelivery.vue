@@ -3,9 +3,7 @@
     <title-header :title="title"></title-header>
     <good :list="goodList"></good>
   </div>
-
 </template>
-
 <script>
 import Good from '@/components/good.vue'
 import TitleHeader from '@/components/titleHeader.vue'

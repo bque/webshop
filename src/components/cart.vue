@@ -2,7 +2,7 @@
   <div class="cart">
     <div class="top">
       <h2>购物车</h2>
-      <span>编辑</span>
+      <span @click="">编辑</span>
     </div>
     <div class="section">
       <div class="store" v-for="(value,index) in shoppingGoods">
@@ -20,7 +20,6 @@
               <p class="firstP">
                 <router-link :to="{name:'gooddetail' ,query : {good:'1222'}}" style="border: none;">{{item.name}}</router-link>
               </p>
-
               <p>
                 <span class='opacity'>重量:{{item.weight}}</span>
                 <span class="positionRight opacity">修改</span>
