@@ -26,9 +26,6 @@ export default {
     Search,
     ClassificationOfLinkage,
     Foot
-  },
-  data () {
-    return {}
   }
 }
 </script>
