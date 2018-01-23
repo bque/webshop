@@ -1,5 +1,6 @@
 <template>
   <div>
+    <title-header :title="title"></title-header>
     <goodB :list='list'>
       <p slot='top'></p>
     </goodB>
@@ -23,6 +24,7 @@
 
 <script>
 import goodB from '@/components/goodB.vue'
+import TitleHeader from '@/components/titleHeader.vue'
 import { CellFormPreview, Group, Cell, XButton } from 'vux'
 export default {
   components: {
@@ -30,10 +32,12 @@ export default {
     CellFormPreview,
     Group,
     Cell,
-    XButton
+    XButton,
+    TitleHeader
   },
   data () {
     return {
+      title: '申请退款',
       list: [
         {
           shopName: '新华都超市',

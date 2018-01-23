@@ -1,8 +1,6 @@
 <template>
   <div>
-    <x-header class="tilte-header">
-      <span style="color: #333;">退款/售后</span>
-    </x-header>
+    <title-header :title="title"></title-header>
     <goodB :list='list' :mark='false'>
     </goodB>
   </div>
@@ -10,14 +8,15 @@
 
 <script>
 import goodB from '@/components/goodB.vue'
-import { XHeader } from 'vux'
+import TitleHeader from '@/components/titleHeader.vue'
 export default {
   components: {
     goodB,
-    XHeader
+    TitleHeader
   },
   data () {
     return {
+      title: '退款/售后',
       list: [
         {
           shopName: '新华都超市',
@@ -51,9 +50,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.tilte-header {
-  background-color: #fff;
-}
-</style>

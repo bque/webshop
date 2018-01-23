@@ -2,7 +2,7 @@
   <div>
     <div class="top relative">
       订单支付成功
-      <span class="positionR">完成</span>
+      <span class="positionR"><router-link to="/shoppingCart">完成</router-link></span>
     </div>
     <div class="result">
       <div class="left">

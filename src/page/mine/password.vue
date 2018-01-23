@@ -1,9 +1,6 @@
 <template>
   <div>
-    <x-header class="tilte-header">
-      <span style="color: #333;">修改密码</span>
-    </x-header>
-
+    <title-header :title="title"></title-header>
     <group label-width="4.2em" label-margin-right="1em" label-align="justify" class="m-1-t">
       <x-input title="当前密码" type="password" v-model="passwords"></x-input>
       <x-input title="新密码" type="password" v-model="passwords1"></x-input>
@@ -18,27 +15,26 @@
 
 </template>
 <script>
-import { Group, XInput, XHeader, XButton } from 'vux'
+import { Group, XInput, XButton } from 'vux'
+import TitleHeader from '@/components/titleHeader.vue'
 export default {
   components: {
     Group,
     XInput,
-    XHeader,
-    XButton
+    XButton,
+    TitleHeader
   },
   data () {
     return {
       passwords: '',
       passwords1: '',
-      passwords2: ''
+      passwords2: '',
+      title: '修改密码'
     }
   }
 }
 </script>
 <style scoped>
-.tilte-header {
-  background-color: #fff;
-}
 .m-1-t {
   margin-top: -1.3em;
 }
