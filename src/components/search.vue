@@ -1,13 +1,11 @@
 <template>
   <div class="header">
     <search class="search" placeholder="搜索" auto-scroll-to-top top="0" position="fixed" @on-focus="onFocus" @on-cancel="onCancel" @on-submit="onSubmit" ref="search">
-      <slot name='left'>
+      <slot name='left' v-if="show">
         <div class="address" slot="left">{{place}}</div>
       </slot>
-      <slot name='right'>
-        <!--<div  class="right"  slot="right">-->
+      <slot name='right' v-if="show">
         <span class="iconfont icon-saoma rights" slot="right"></span>
-        <!--</div>-->
       </slot>
     </search>
   </div>
@@ -21,19 +19,20 @@ export default {
   },
   data () {
     return {
-      place: '福州'
+      place: '福州',
+      show:true
     }
   },
   methods: {
     onFocus () {
-      this.place = ''
+      this.show =false
       document.getElementsByClassName(
         'weui-search-bar__cancel-btn'
       )[0].style.color =
         'gray'
     },
     onCancel () {
-      this.place = '福州'
+      this.show =true
     },
     onSubmit () {
       this.$refs.search.setBlur()
