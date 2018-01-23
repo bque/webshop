@@ -2,10 +2,7 @@
   <div class="wrap">
     <sticky scroll-box="" :check-sticky-support="false" class="sticky" v-if="tabShow">
       <tab :line-width="1" style="" class="classification ">
-        <tab-item selected @click.native="switchs(10)">今日推荐</tab-item>
-        <tab-item @click.native="switchs(5)">酒水饮料</tab-item>
-        <tab-item @click.native="switchs(5)">粮油副食</tab-item>
-        <tab-item @click.native="switchs(5)">个护美妆</tab-item>
+        <tab-item v-for="(value,index) in tabData" v-if="index<4" :selected='index<1' @click.native="switchs(10)" key="index">{{value}}</tab-item>
         <span style="" class="more iconfont icon-dayuhao" @click="switchTab">
         </span>
       </tab>
@@ -16,45 +13,17 @@
         <span class=" iconfont icon-dayuhao1" @click="switchTab"></span>
         <hr />
         <ul>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
-          </li>
-          <li>
-            <a>新品上架</a>
+          <li v-for="(value,index) in tabData">
+            <a>{{value}}</a>
           </li>
         </ul>
       </div>
     </div>
     <!--		<div class="vux-sticky-fill" style="height:44px;"></div>-->
-
     <scroller lock-x height="45rem" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="0">
       <div class="box1">
         <grid :cols='2' class='padding0'>
-          <grid-item :link="{name:'gooddetail',query:{Id:'12'}}" v-for="i in bottomCount" :key="i" style="" class="item">
+          <grid-item :link="{name:'gooddetail',query:{Id:'12'}}" v-for="i in bottomCount" :key="i" class="item">
             <!--		<span class="grid-center">{{i}}</span>-->
             <img src="http://app.nhd-mart.com/xhdshop/upload/image/201612/77332af9-1222-48ba-9f16-2a11e84653ff-medium.jpg" />
             <div class="content">
@@ -86,7 +55,22 @@ export default {
   data () {
     return {
       bottomCount: 20,
-      tabShow: true
+      tabShow: true,
+      tabData: [
+        '今日推荐',
+        '酒水饮料',
+        '粮油副食',
+        '个护美妆',
+        '今日推荐',
+        '酒水饮料',
+        '粮油副食',
+        '个护美妆',
+        '个护美妆',
+        '今日推荐',
+        '酒水饮料',
+        '粮油副食',
+        '个护美妆'
+      ]
     }
   },
   methods: {
@@ -115,6 +99,15 @@ export default {
     switchTab (evt) {
       event.stopPropagation()
       this.tabShow = !this.tabShow
+
+      this.$nextTick(() => {
+        var topDom = document.getElementsByClassName('top')[0]
+        if (topDom) {
+          var num = Math.ceil(this.tabData.length / 4)
+          document.getElementsByClassName('top')[0].style.height =
+            2.5 + 3 * num + 'rem'
+        }
+      })
     }
   }
 }
@@ -177,13 +170,14 @@ export default {
 
 .moreClass .top {
   width: 100%;
-  height: 11.5rem;
+  min-height: 6.5rem;
   position: relative;
   background: white;
-  margin-top: 2.88rem;
+  margin-top: 2.78rem;
 }
 
 .moreClass .top h2 {
+  border-top: 1px solid #c7c7c7;
   font-weight: normal;
   text-align: center;
   color: gray;

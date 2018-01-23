@@ -1,51 +1,53 @@
 <template>
-  <div class="cart">
-    <div class="top">
-      <h2>购物车</h2>
-      <span @click="">编辑</span>
-    </div>
-    <div class="section">
-      <div class="store" v-for="(value,index) in shoppingGoods">
-        <div class="shopName"><input type="checkbox" v-model="value.checkStoreAll" @click="checkStoreAll(index)" /> {{value.store}}</div>
-        <ul class="shopGoods">
-          <li class="clearfix shopGoodsLi" v-for="(item,indexs) in value.goods">
-            <div class="left">
-              <input type="checkbox" v-model="item.check" @click="checkItem(index,indexs)" />
-              <router-link :to="{name:'gooddetail' ,query : {Id:'1222'}}">
-                <img :src='item.img' align="absmiddle" />
-              </router-link>
-            </div>
-            <div class="right relative" :class="{noBorder:indexs==value.goods.length-1}">
-
-              <p class="firstP">
-                <router-link :to="{name:'gooddetail' ,query : {good:'1222'}}" style="border: none;">{{item.name}}</router-link>
-              </p>
-              <p>
-                <span class='opacity'>重量:{{item.weight}}</span>
-                <span class="positionRight opacity">修改</span>
-              </p>
-              <p class="lastP">
-                <span class="money">￥{{item.price}}</span>
-                <!--<s class="referencePrice">$100</s>-->
-                <span class="positionRight">
-                  <a class="a" @click="changeNum(index,indexs,-1)">-</a>
-                  <a class="a">{{item.num}}</a>
-                  <a class="a" @click="changeNum(index,indexs,1)">+</a>
-                </span>
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="bottom relative">
-      <input type="checkbox" v-model="checkAll" @click="checkAllGoods" /> 全选
-      <a class="total">合计:
-        <span class="money smallFont">￥{{totalMoney}}</span>
-      </a>
-      <router-link :to="{name:'fillorder',query:{Id:'122'}}" class="settlement">去结算(1)</router-link>
-    </div>
-  </div>
+	<div class="cart">
+		<div class="top">
+			<h2>购物车</h2>
+			<span @click="show=!show">管理</span>
+		</div>
+		<div class="section">
+			<div class="management" v-if="show">选择商品点击删除
+				<a @click="deleteGood">删除</a>
+			</div>
+			<div class="store" v-for="(value,index) in shoppingGoods">
+				<div class="shopName" v-if="value.goods.length"><input type="checkbox" v-model="value.checkStoreAll" @click="checkStoreAll(index)" />&nbsp;&nbsp; {{value.store}}</div>
+				<ul class="shopGoods">
+					<li class="clearfix shopGoodsLi" v-for="(item,indexs) in value.goods">
+						<div class="left">
+							<input type="checkbox" v-model="item.check" @click="checkItem(index,indexs)" />
+							<router-link :to="{name:'gooddetail' ,query : {Id:'1222'}}">
+								<img :src='item.img' align="absmiddle" />
+							</router-link>
+						</div>
+						<div class="right relative" :class="{noBorder:indexs==value.goods.length-1}">
+							<p class="firstP">
+								<router-link :to="{name:'gooddetail' ,query : {good:'1222'}}" style="border: none;">{{item.name}}</router-link>
+							</p>
+							<p>
+								<span class='opacity'>重量:{{item.weight}}</span>
+								<span class="positionRight opacity editor" @click="">编辑</span>
+							</p>
+							<p class="lastP">
+								<span class="money">￥{{item.price}}</span>
+								<!--<s class="referencePrice">$100</s>-->
+								<span class="positionRight">
+									<a class="a" @click="changeNum(index,indexs,-1)">-</a>
+									<a class="a">{{item.num}}</a>
+									<a class="a" @click="changeNum(index,indexs,1)">+</a>
+								</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom relative">
+			<input type="checkbox" v-model="checkAll" @click="checkAllGoods" /> 全选
+			<a class="total">合计:
+				<span class="money smallFont">￥{{totalMoney}}</span>
+			</a>
+			<router-link :to="{name:'fillorder',query:{Id:'122'}}" class="settlement">去结算(1)</router-link>
+		</div>
+	</div>
 
 </template>
 
@@ -106,7 +108,8 @@ export default {
           ]
         }
       ],
-      selectedGoogs: []
+      selectedGoogs: [],
+      show: false
     }
   },
   methods: {
@@ -166,6 +169,17 @@ export default {
         })
         this.totalMoney = totalMoney
       })
+    },
+    deleteGood () {
+      this.shoppingGoods.forEach((value, indexs) => {
+        var len = value.goods.length
+        for (let i = len - 1; i >= 0; i--) {
+          if (value.goods[i].check) {
+            value.goods.splice(i, 1)
+            this.addMoney()
+          }
+        }
+      })
     }
   },
   watch: {}
@@ -173,6 +187,31 @@ export default {
 </script>
 
 <style scoped>
+.management {
+  width: 100%;
+  font-size: 0.9rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding-left: 3%;
+  background: white;
+  position: relative;
+}
+
+.management a {
+  display: block;
+  color: red;
+  width: 4rem;
+  height: 1.5rem;
+  border: 1px solid red;
+  border-radius: 10px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height: 1.5rem;
+  text-align: center;
+}
+
 .cart {
   width: 100%;
   height: auto;
@@ -184,7 +223,7 @@ export default {
   width: 100%;
   height: 3rem;
   position: relative;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
   background: white;
   line-height: 3rem;
   box-shadow: 0 1px 1px grey;
@@ -206,10 +245,10 @@ export default {
 
 .shopName {
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 1rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  padding-left: 3.5%;
+  padding-left: 3%;
   background: #fafafa;
 }
 
@@ -225,14 +264,14 @@ export default {
 }
 
 .shopGoods .left {
-  width: 35%;
+  width: 40%;
   height: 100%;
   float: left;
 }
 
 .shopGoods .right {
   padding-left: 2%;
-  width: 63%;
+  width: 58%;
   height: 100%;
   font-size: 0.8rem;
   float: left;
@@ -240,12 +279,16 @@ export default {
 }
 
 .shopGoods .right .a {
-  padding: 1px 8px;
+  padding: 2px 10px;
   border: 1px solid gainsboro;
 }
 
 .shopGoods .left input {
-  margin-left: 5%;
+  margin-left: 10%;
+}
+
+input[type='checkbox'] {
+  transform: scale(1.3);
 }
 
 .shopGoods .left img {
@@ -265,7 +308,7 @@ export default {
 
 .positionRight {
   position: absolute;
-  right: 2%;
+  right: 5%;
 }
 
 .opacity {
@@ -332,6 +375,7 @@ export default {
   position: absolute;
   right: 35.5%;
 }
+
 .section .noBorder {
   border-bottom: none;
 }

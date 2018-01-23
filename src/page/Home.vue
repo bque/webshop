@@ -35,6 +35,7 @@ header {
   z-index: 100;
 }
 section {
+	overflow: hidden;
   margin-top: 2.6rem;
 }
 </style>
@@ -50,19 +51,19 @@ import Foot from '@/components/footer.vue'
 
 var baseList = [
   {
-    url: 'javascript:',
+    url: 'http://localhost:8080/home',
     img:
       'http://app.nhd-mart.com/xhdshop/upload/image/201711/93313f9d-e986-485c-942d-3bcafb08505c.jpg',
     title: '送你一朵fua'
   },
   {
-    url: 'javascript:',
+    url: 'http://localhost:8080/home',
     img:
       'http://app.nhd-mart.com/xhdshop/upload/image/201711/5270b9ee-4ba1-4d41-b90a-83724f7fb2ad.jpg',
     title: '送你一辆车'
   },
   {
-    url: 'javascript:',
+    url: 'http://localhost:8080/home',
     img: 'https://static.vux.li/demo/3.jpg',
     title: '送你一次旅行'
   }
